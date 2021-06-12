@@ -7,7 +7,7 @@
 </head>
 
 <body>
-   
+
    <!--====== PRELOADER PART START ======-->
    <?php include("splash-loader.php");?> 
    <!--====== PRELOADER PART START ======-->
