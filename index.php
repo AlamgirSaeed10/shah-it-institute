@@ -213,7 +213,7 @@
             </div> <!-- row -->
             <div class="row course-slied mt-30">
                 <?php
-                $sql = "SELECT * FROM `courses_detail`";
+                $sql = "SELECT * FROM course_deatil ";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
@@ -226,11 +226,11 @@
                                         <img src="images/course/cu-1.jpg" alt="Course">
                                     </div>
                                     <div class="price">
-                                        <span>Free</span>
+                                        <span><?php echo $row['course_price'];  ?></span>
                                     </div>
                                     <div class="course-teacher">
                                         <div class="thum">
-                                            <a href="#"><img src="images/course/teacher/t-1.jpg" alt="teacher"></a>
+                                            <a href="#"><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '" />' ?></a>
                                         </div>
                                         <div class="name">
                                             <a href="#">
@@ -239,18 +239,14 @@
                                         </div>
                                         <div class="review">
                                             <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i><?php echo $row['course_review'] ?></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="cont">
                                     <a href="#">
-                                        <h4><?php echo $row['course_name'];  ?></h4>
+                                        <h4><?php echo $row['course_description'];  ?></h4>
                                     </a>
                                 </div>
                             </div>
