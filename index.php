@@ -2,93 +2,91 @@
 <html lang="en">
 
 <head>
-    <?php include("database/connection.php"); ?>  
-    <?php include("link-libraries.php");?>
+    <?php include("database/connection.php"); ?>
+    <?php include("link-libraries.php"); ?>
 </head>
 
 <body>
 
-   <!--====== PRELOADER PART START ======-->
-   <?php include("splash-loader.php");?> 
-   <!--====== PRELOADER PART START ======-->
-   
+    <!--====== PRELOADER PART START ======-->
+    <!-- <?php include("splash-loader.php"); ?> -->
+    <!--====== PRELOADER PART START ======-->
+
     <!--====== HEADER PART START ======-->
-    <?php include("header.php");?>
+    <?php include("header.php"); ?>
     <!--====== HEADER PART ENDS ======-->
-   
+
     <!--====== SEARCH BOX PART START ======-->
     <?php
-    if(isset($_POST['submit'])){
-        $user_search =$_POST['search-course'];
+    if (isset($_POST['submit'])) {
+        $user_search = $_POST['search-course'];
         $sql = "SELECT * FROM courses WHERE `course_name`= '$user_search'";
 
         $result = $conn->query($sql);
-        if(mysqli_num_rows($result) > 0)
-        {
-    while ($row = mysqli_fetch_array($result))
-    {
-        echo $row['course_id'] . "--" . $row['course_name'];   
-    }
-    }else{
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_array($result)) {
+                echo $row['course_name'];
+            }
+        } else {
 
-        echo "Break";
-    }
+            echo "Break";
+        }
     }
     ?>
-
-
     <div class="search-box">
         <div class="serach-form">
             <div class="closebtn">
                 <span></span>
                 <span></span>
             </div>
-            <form name = "search-form" method="POST" autocomplete="off">
+            <form method="POST" autocomplete="off">
                 <input type="text" name="search-course" id="search-course" placeholder="Search by keyword">
                 <button name="submit"><i class="fa fa-search"></i></button>
             </form>
         </div> <!-- serach form -->
     </div>
-    
+
     <!--====== SEARCH BOX PART ENDS ======-->
-   
+
     <!--====== SLIDER PART START ======-->
-    
-    <section id="slider-part-3" class="bg_cover"  style="background-image: url(images/slider/s-3.jpg)">
+    <?php
+    if (isset($_POST['submit-btn'])) {
+        if (!empty($_POST['course-selection'])) {
+            $selected = $_POST['course-selection'];
+            echo 'You have chosen: ' . $selected;
+        } else {
+            echo 'Please select the value.';
+        }
+    }
+    ?>
+
+    <section id="slider-part-3" class="bg_cover" style="background-image: url(images/slider/s-3.jpg)">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="slider-cont-3 text-center">
                         <h2>Search for prefered courses</h2>
-                        <span>More then 3000+ courses for you</span>
+                        <span>More then 9+ courses for you</span>
                         <div class="slider-search mt-45">
-                           <form action="#">
+                            <form method="POST" autocomplete="off">
                                 <div class="row no-gutters">
                                     <div class="col-sm-9">
-                                        <select>
+                                        <select name="course-selection">
                                             <?php
                                             $sql = "SELECT * FROM `courses`";
                                             $result = $conn->query($sql);
-                                            
+
                                             if ($result->num_rows > 0) {
-                                              // output data of each row
-                                              while($row = $result->fetch_assoc()) {?>
-                                                <option value="<?php echo $row["course_id"]?>"><?php echo $row["course_name"]?></option>
-                                              <?php
-                                              }
-                                            } 
+                                                while ($row = $result->fetch_assoc()) { ?>
+                                                    <option value="<?php echo $row["course_name"] ?>"><?php echo $row["course_name"] ?></option>
+                                            <?php
+                                                }
+                                            }
                                             ?>
-
-
-
-
                                         </select>
                                     </div>
-                                    <!-- <div class="col-sm-6">
-                                        <input type="text" placeholder="Search keyword">
-                                    </div> -->
                                     <div class="col-sm-3">
-                                        <button type="button" class="main-btn">Search Now</button>
+                                        <button name="submit-btn" class="main-btn">Search Now</button>
                                     </div>
                                 </div> <!-- row -->
                             </form>
@@ -104,8 +102,8 @@
                                 <img src="images/all-icon/man.png" alt="icon">
                             </div>
                             <div class="cont">
-                                <h3>13,0000</h3>
-                                <span>Worldwide Students</span>
+                                <h3>40+</h3>
+                                <span>Overall Students</span>
                             </div>
                         </div> <!-- singel slider feature -->
                     </div>
@@ -115,7 +113,7 @@
                                 <img src="images/all-icon/book.png" alt="icon">
                             </div>
                             <div class="cont">
-                                <h3>4,000509</h3>
+                                <h3>09+</h3>
                                 <span>Available Courses</span>
                             </div>
                         </div> <!-- singel slider feature -->
@@ -135,11 +133,11 @@
             </div> <!-- slider feature -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== SLIDER PART ENDS ======-->
-    
+
     <!--====== CATEGORY PART START ======-->
-    
+
     <section id="category-3" class="category-2-items pt-50 pb-80 gray-bg">
         <div class="container">
             <div class="row">
@@ -150,8 +148,8 @@
                         </div>
                         <div class="items-cont">
                             <a href="#">
-                                <h5>App Design</h5>
-                                <span>24 courses</span>
+                                <h5>Mobile App Design</h5>
+                                <!-- <span>24 courses</span> -->
                             </a>
                         </div>
                     </div> <!-- singel items -->
@@ -164,7 +162,7 @@
                         <div class="items-cont">
                             <a href="#">
                                 <h5>UI/ UX Design</h5>
-                                <span>103 courses</span>
+                                <!-- <span>103 courses</span> -->
                             </a>
                         </div>
                     </div> <!-- singel items -->
@@ -176,8 +174,8 @@
                         </div>
                         <div class="items-cont">
                             <a href="#">
-                                <h5>App development</h5>
-                                <span>57 courses</span>
+                                <h5>Web App development</h5>
+                                <!-- <span>57 courses</span> -->
                             </a>
                         </div>
                     </div> <!-- singel items -->
@@ -189,7 +187,7 @@
                         </div>
                         <div class="items-cont">
                             <a href="#">
-                                <h5>Photography</h5>
+                                <h5>Game development</h5>
                                 <span>17 courses</span>
                             </a>
                         </div>
@@ -198,11 +196,11 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== CATEGORY PART ENDS ======-->
-    
+
     <!--====== COURSE PART START ======-->
-    
+
     <section id="course-part" class="pt-115 pb-115">
         <div class="container">
             <div class="row">
@@ -214,174 +212,62 @@
                 </div>
             </div> <!-- row -->
             <div class="row course-slied mt-30">
-                <div class="col-lg-4">
-                    <div class="singel-course-2">
-                        <div class="thum">
-                            <div class="image">
-                                <img src="images/course/cu-1.jpg" alt="Course">
-                            </div>
-                            <div class="price">
-                                <span>Free</span>
-                            </div>
-                            <div class="course-teacher">
+                <?php
+                $sql = "SELECT * FROM `courses_detail`";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) { ?>
+                        <div class="col-lg-4">
+
+                            <div class="singel-course-2">
                                 <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-1.jpg" alt="teacher"></a>
+                                    <div class="image">
+                                        <img src="images/course/cu-1.jpg" alt="Course">
+                                    </div>
+                                    <div class="price">
+                                        <span>Free</span>
+                                    </div>
+                                    <div class="course-teacher">
+                                        <div class="thum">
+                                            <a href="#"><img src="images/course/teacher/t-1.jpg" alt="teacher"></a>
+                                        </div>
+                                        <div class="name">
+                                            <a href="#">
+                                                <h6> <?php echo $row['course_id'];  ?></h6>
+                                            </a>
+                                        </div>
+                                        <div class="review">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
-                                </div>
-                                <div class="review">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                <div class="cont">
+                                    <a href="#">
+                                        <h4><?php echo $row['course_name'];  ?></h4>
+                                    </a>
                                 </div>
                             </div>
+                            <!-- singel course -->
                         </div>
-                        <div class="cont">
-                            <a href="#"><h4>Learn basis javascirpt from start for beginner</h4></a>
-                        </div>
-                    </div> <!-- singel course -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="singel-course-2">
-                        <div class="thum">
-                            <div class="image">
-                                <img src="images/course/cu-2.jpg" alt="Course">
-                            </div>
-                            <div class="price">
-                                <span>Free</span>
-                            </div>
-                            <div class="course-teacher">
-                                <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-2.jpg" alt="teacher"></a>
-                                </div>
-                                <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
-                                </div>
-                                <div class="review">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cont">
-                            <a href="#"><h4>Learn basis javascirpt from start for beginner</h4></a>
-                        </div>
-                    </div> <!-- singel course -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="singel-course-2">
-                        <div class="thum">
-                            <div class="image">
-                                <img src="images/course/cu-3.jpg" alt="Course">
-                            </div>
-                            <div class="price">
-                                <span>Free</span>
-                            </div>
-                            <div class="course-teacher">
-                                <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-3.jpg" alt="teacher"></a>
-                                </div>
-                                <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
-                                </div>
-                                <div class="review">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cont">
-                            <a href="#"><h4>Learn basis javascirpt from start for beginner</h4></a>
-                        </div>
-                    </div> <!-- singel course -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="singel-course-2">
-                        <div class="thum">
-                            <div class="image">
-                                <img src="images/course/cu-4.jpg" alt="Course">
-                            </div>
-                            <div class="price">
-                                <span>Free</span>
-                            </div>
-                            <div class="course-teacher">
-                                <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-4.jpg" alt="teacher"></a>
-                                </div>
-                                <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
-                                </div>
-                                <div class="review">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cont">
-                            <a href="#"><h4>Learn basis javascirpt from start for beginner</h4></a>
-                        </div>
-                    </div> <!-- singel course -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="singel-course-2">
-                        <div class="thum">
-                            <div class="image">
-                                <img src="images/course/cu-5.jpg" alt="Course">
-                            </div>
-                            <div class="price">
-                                <span>Free</span>
-                            </div>
-                            <div class="course-teacher">
-                                <div class="thum">
-                                    <a href="courses-singel.php"><img src="images/course/teacher/t-5.jpg" alt="teacher"></a>
-                                </div>
-                                <div class="name">
-                                    <a href="#"><h6>Mark anthem</h6></a>
-                                </div>
-                                <div class="review">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cont">
-                            <a href="#"><h4>Learn basis javascirpt from start for beginner</h4></a>
-                        </div>
-                    </div> <!-- singel course -->
-                </div>
+                <?php
+                    }
+                }
+                ?>
             </div> <!-- course slied -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== COURSE PART ENDS ======-->
-    
+
     <!--====== COUNT DOWN PART START ======-->
-    
+
     <section id="count-down-part" class="bg_cover pt-70 pb-120" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
         <div class="container">
             <div class="row align-items-center justify-content-center">
@@ -419,11 +305,11 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== COUNT DOWN PART ENDS ======-->
-    
+
     <!--====== COUNTER PART START ======-->
-    
+
     <div id="counter-part" class="bg_cover pt-25 pb-70 gray-bg">
         <div class="container">
             <div class="row">
@@ -454,11 +340,11 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </div>
-    
+
     <!--====== COUNTER PART ENDS ======-->
-    
+
     <!--====== EVENT 2 PART START ======-->
-    
+
     <section id="event-part" class="pt-120 pb-120">
         <div class="container">
             <div class="event-bg bg_cover" style="background-image: url(images/bg-3.jpg)">
@@ -472,7 +358,9 @@
                                 <li>
                                     <div class="singel-event">
                                         <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                        <a href="events-singel.php"><h4>Campus clean workshop</h4></a>
+                                        <a href="events-singel.php">
+                                            <h4>Campus clean workshop</h4>
+                                        </a>
                                         <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
                                         <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
                                     </div>
@@ -480,7 +368,9 @@
                                 <li>
                                     <div class="singel-event">
                                         <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                        <a href="events-singel.php"><h4>Tech Summit</h4></a>
+                                        <a href="events-singel.php">
+                                            <h4>Tech Summit</h4>
+                                        </a>
                                         <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
                                         <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
                                     </div>
@@ -488,23 +378,25 @@
                                 <li>
                                     <div class="singel-event">
                                         <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                        <a href="events-singel.php"><h4>Enviroement conference</h4></a>
+                                        <a href="events-singel.php">
+                                            <h4>Enviroement conference</h4>
+                                        </a>
                                         <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
                                         <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
                                     </div>
                                 </li>
-                            </ul> 
+                            </ul>
                         </div> <!-- event 2 -->
                     </div>
                 </div> <!-- row -->
             </div>
         </div> <!-- container -->
     </section>
-    
+
     <!--====== EVENT 2 PART ENDS ======-->
-    
+
     <!--====== TEACHERS PART START ======-->
-    
+
     <section id="teachers-part" class="pt-65 pb-120 gray-bg">
         <div class="container">
             <div class="row">
@@ -521,7 +413,9 @@
                                         <img src="images/teachers/teacher-2/tc-1.jpg" alt="Teacher">
                                     </div>
                                     <div class="cont">
-                                        <a href="teachers-singel.php"><h5>Mark anthem</h5></a>
+                                        <a href="teachers-singel.php">
+                                            <h5>Mark anthem</h5>
+                                        </a>
                                         <p>JAVA Expert</p>
                                         <span><i class="fa fa-book"></i>10 Courses</span>
                                     </div>
@@ -533,7 +427,9 @@
                                         <img src="images/teachers/teacher-2/tc-2.jpg" alt="Teacher">
                                     </div>
                                     <div class="cont">
-                                        <a href="teachers-singel.php"><h5>Hellen Mark</h5></a>
+                                        <a href="teachers-singel.php">
+                                            <h5>Hellen Mark</h5>
+                                        </a>
                                         <p>Laravel Expert</p>
                                         <span><i class="fa fa-book"></i>05 Courses</span>
                                     </div>
@@ -545,7 +441,9 @@
                                         <img src="images/teachers/teacher-2/tc-1.jpg" alt="Teacher">
                                     </div>
                                     <div class="cont">
-                                        <a href="teachers-singel.php"><h5>Maria Noor</h5></a>
+                                        <a href="teachers-singel.php">
+                                            <h5>Maria Noor</h5>
+                                        </a>
                                         <p>JAVA Expert</p>
                                         <span><i class="fa fa-book"></i>10 Courses</span>
                                     </div>
@@ -557,7 +455,9 @@
                                         <img src="images/teachers/teacher-2/tc-1.jpg" alt="Teacher">
                                     </div>
                                     <div class="cont">
-                                        <a href="teachers-singel.php"><h5>Alan hen</h5></a>
+                                        <a href="teachers-singel.php">
+                                            <h5>Alan hen</h5>
+                                        </a>
                                         <p>Laravel Expert</p>
                                         <span><i class="fa fa-book"></i>05 Courses</span>
                                     </div>
@@ -578,14 +478,14 @@
                                 <h6>Mark anthem</h6>
                                 <span>Bsc, Engineering</span>
                             </div> <!-- singel student -->
-                            
+
                             <div class="singel-student">
                                 <img src="images/teachers/teacher-2/quote.png" alt="Quote">
                                 <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet</p>
                                 <h6>Mark anthem</h6>
                                 <span>Bsc, Engineering</span>
                             </div> <!-- singel student -->
-                            
+
                             <div class="singel-student">
                                 <img src="images/teachers/teacher-2/quote.png" alt="Quote">
                                 <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet</p>
@@ -601,11 +501,11 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== TEACHERS PART ENDS ======-->
-   
+
     <!--====== NEWS PART START ======-->
-    
+
     <section id="news-part" class="pt-115 pb-110">
         <div class="container">
             <div class="row">
@@ -627,7 +527,9 @@
                                 <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
                                 <li><a href="#"> <span>By</span> Adam linn</a></li>
                             </ul>
-                            <a href="blog-singel.php"><h3>Tips to grade high cgpa in university life</h3></a>
+                            <a href="blog-singel.php">
+                                <h3>Tips to grade high cgpa in university life</h3>
+                            </a>
                             <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .</p>
                         </div>
                     </div> <!-- singel news -->
@@ -646,8 +548,10 @@
                                         <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
                                         <li><a href="#"> <span>By</span> Adam linn</a></li>
                                     </ul>
-                                    <a href="blog-singel.php"><h3>Intellectual communication</h3></a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons  vel.</p>
+                                    <a href="blog-singel.php">
+                                        <h3>Intellectual communication</h3>
+                                    </a>
+                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons vel.</p>
                                 </div>
                             </div>
                         </div> <!-- row -->
@@ -665,8 +569,10 @@
                                         <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
                                         <li><a href="#"> <span>By</span> Adam linn</a></li>
                                     </ul>
-                                    <a href="blog-singel.php"><h3>Study makes you perfect</h3></a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons  vel.</p>
+                                    <a href="blog-singel.php">
+                                        <h3>Study makes you perfect</h3>
+                                    </a>
+                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons vel.</p>
                                 </div>
                             </div>
                         </div> <!-- row -->
@@ -684,8 +590,10 @@
                                         <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
                                         <li><a href="#"> <span>By</span> Adam linn</a></li>
                                     </ul>
-                                    <a href="blog-singel.php"><h3>Technology edcution is now....</h3></a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons  vel.</p>
+                                    <a href="blog-singel.php">
+                                        <h3>Technology edcution is now....</h3>
+                                    </a>
+                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons vel.</p>
                                 </div>
                             </div>
                         </div> <!-- row -->
@@ -694,11 +602,11 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== NEWS PART ENDS ======-->
-   
+
     <!--====== PATNAR LOGO PART START ======-->
-    
+
     <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
         <div class="container">
             <div class="row patnar-slied">
@@ -734,24 +642,24 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </div> 
-    
+    </div>
+
     <!--====== PATNAR LOGO PART ENDS ======-->
-   
+
     <!--====== FOOTER PART START ======-->
-    <?php include("footer.php");?>    
+    <?php include("footer.php"); ?>
     <!--====== FOOTER PART ENDS ======-->
-   
+
     <!--====== BACK TO TP PART START ======-->
-    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>    
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
     <!--====== BACK TO TP PART ENDS ======-->
 
     <!--====== BACK TO TP PART ENDS ======-->
-    <?php include("jsScripts.php");?>
+    <?php include("jsScripts.php"); ?>
     <!--====== BACK TO TP PART ENDS ======-->
 
-    
-   
+
+
 
 </body>
 

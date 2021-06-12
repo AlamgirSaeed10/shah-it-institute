@@ -27,7 +27,14 @@ SET time_zone = "+00:00";
 -- Table structure for table `courses`
 --
 
-CREATE TABLE `courses` (
+CREATE TABLE IF NOT EXISTS `courses`(
+  `id` int(11) NOT NULL,
+  `course_id` varchar(255) NOT NULL,
+  `course_name` varchar(255) NOT NULL,
+  `course_category` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `courses_detail` (
   `id` int(11) NOT NULL,
   `course_id` varchar(255) NOT NULL,
   `course_name` varchar(255) NOT NULL,
@@ -38,9 +45,25 @@ CREATE TABLE `courses` (
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`id`, `course_id`, `course_name`, `course_category`) VALUES
-(1, 'gfx-001', 'gd', 'Graphics'),
-(2, 'web-002', 'wd', 'Development');
+INSERT INTO `courses` (`course_id`, `course_name`, `course_category`) VALUES
+('gfx-001', 'gd', 'Graphics 1'),
+('gfx-002', 'gd', 'Graphics 2' ),
+('web-002', 'wd', 'Development');
+
+INSERT INTO `courses_detail` (`course_id`, `course_name`, `course_category`) VALUES
+( 'gfx-001', 'gd', 'Graphics 1'),
+( 'gfx-002', 'gd', 'Graphics 2' ),
+( 'gfx-003', 'gd', 'Graphics 3'),
+( 'gfx-004', 'gd', 'Graphics 4'),
+('gfx-005', 'gd', 'Graphics 5' ),
+( 'gfx-006', 'gd', 'Graphics 6'),
+( 'gfx-007', 'gd', 'Graphics 7'),
+( 'gfx-008', 'gd', 'Graphics 8'),
+( 'gfx-009', 'gd', 'Graphics 9'),
+( 'gfx-010', 'gd', 'Graphics 10'),
+( 'gfx-011', 'gd', 'Graphics 11'),
+( 'gfx-012', 'gd', 'Graphics 12'),
+( 'web-002', 'wd', 'Development');
 
 --
 -- Indexes for dumped tables
