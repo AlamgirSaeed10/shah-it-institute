@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!--====== Title ======-->
-    <title>Edubin - LMS Education HTML Template</title>
+    <title>Shah It Institute</title>
     
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
@@ -52,7 +52,7 @@
    
    <!--====== PRELOADER PART START ======-->
     
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="loader rubix-cube">
             <div class="layer layer-1"></div>
             <div class="layer layer-2"></div>
@@ -63,7 +63,7 @@
             <div class="layer layer-7"></div>
             <div class="layer layer-8"></div>
         </div>
-    </div>
+    </div> -->
     
     <!--====== PRELOADER PART START ======-->
    
