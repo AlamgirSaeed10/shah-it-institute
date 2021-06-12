@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <?php include "connection.php"; ?>
    
     <!--====== Required meta tags ======-->
     <meta charset="utf-8">
@@ -13,7 +14,7 @@
     <title>Shah It Institute</title>
     
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="images/shah-it-institute-logo.png" type="image/png">
 
     <!--====== Slick css ======-->
     <link rel="stylesheet" href="css/slick.css">
@@ -87,12 +88,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="index-2.html">Home</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="index-2.html">Home 01</a></li>
-                                            <li><a href="index-3.html">Home 02</a></li>
-                                            <li><a class="active" href="index-4.html">Home 03</a></li>
-                                        </ul>
+                                        <a class="active" href="index.php">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="about.html">About us</a>
