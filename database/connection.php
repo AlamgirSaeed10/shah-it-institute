@@ -1,16 +1,14 @@
 <?php
-$USERNAME = "root";
-$PASSWORD = "";
-$DATABASE = "shah_it_institute";
-$HOSTNAME = "localhost";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "shah_it_institute";
 
-$conn = new mysqli($HOSTNAME, $USERNAME, $PASSWORD,$DATABASE) or die("Connect failed: %s\n". $conn -> error);
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
 
-if($conn){
-    echo "Successful";
-}
-else{
-
-    die("connection failed!");
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
 ?>

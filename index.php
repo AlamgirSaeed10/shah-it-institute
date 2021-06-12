@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <?php include "connection.php"; ?>
-   
+    <?php include("database/connection.php"); ?>
+
     <!--====== Required meta tags ======-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
