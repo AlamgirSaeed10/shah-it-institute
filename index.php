@@ -6,6 +6,8 @@
     <?php include("link-libraries.php"); ?>
 </head>
 
+<?php $user_id = "stud-" . time(); ?>
+
 <body>
 
     <!--====== PRELOADER PART START ======-->
@@ -15,7 +17,43 @@
     <!--====== HEADER PART START ======-->
     <?php include("header.php"); ?>
     <!--====== HEADER PART ENDS ======-->
+    <?php
+    $sql = "SELECT COUNT(id) FROM `registerd_users`";
+    // SELECT * FROM `certified_students`
 
+    $result = $conn->query($sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_array($result)) {
+            $total_student = $row['COUNT(id)'];
+        }
+    }
+    $sql = "SELECT COUNT(id) FROM `certified_students`";
+    // SELECT * FROM `certified_students`
+
+    $result = $conn->query($sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_array($result)) {
+            $certified_students = $row['COUNT(id)'];
+        }
+    }
+    $sql = "SELECT COUNT(id) FROM `courses`";
+
+    $result = $conn->query($sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_array($result)) {
+            $total_courses = $row['COUNT(id)'];
+        }
+    }
+    $sql = "SELECT COUNT(id) FROM `our_teachers`";
+
+    $result = $conn->query($sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_array($result)) {
+            $total_teachers = $row['COUNT(id)'];
+        }
+    }
+
+    ?>
     <!--====== SEARCH BOX PART START ======-->
     <?php
     if (isset($_POST['submit'])) {
@@ -29,7 +67,7 @@
             }
         } else {
 
-            echo "Break";
+            echo "Course not available";
         }
     }
     ?>
@@ -60,7 +98,7 @@
     }
     ?>
 
-    <section id="slider-part-3" class="bg_cover" style="background-image: url(images/slider/s-3.jpg)">
+    <section id="slider-part-3" class="bg_cover" style="background-image: url(images/slider/bg-04.jpg)">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -102,7 +140,7 @@
                                 <img src="images/all-icon/man.png" alt="icon">
                             </div>
                             <div class="cont">
-                                <h3>40+</h3>
+                                <h3><?php echo $total_student; ?>+</h3>
                                 <span>Overall Students</span>
                             </div>
                         </div> <!-- singel slider feature -->
@@ -113,7 +151,7 @@
                                 <img src="images/all-icon/book.png" alt="icon">
                             </div>
                             <div class="cont">
-                                <h3>09+</h3>
+                                <h3><?php echo $total_courses; ?>+</h3>
                                 <span>Available Courses</span>
                             </div>
                         </div> <!-- singel slider feature -->
@@ -124,7 +162,7 @@
                                 <img src="images/all-icon/expert.png" alt="icon">
                             </div>
                             <div class="cont">
-                                <h3>Expert Instructor</h3>
+                                <h3><?php echo $total_teachers; ?></h3>
                                 <span>Expert Instructors</span>
                             </div>
                         </div> <!-- singel slider feature -->
@@ -161,7 +199,7 @@
                         </div>
                         <div class="items-cont">
                             <a href="#">
-                                <h5>UI/ UX Design</h5>
+                                <h5>Graphic Design</h5>
                                 <!-- <span>103 courses</span> -->
                             </a>
                         </div>
@@ -188,7 +226,7 @@
                         <div class="items-cont">
                             <a href="#">
                                 <h5>Game development</h5>
-                                <span>17 courses</span>
+                                <span></span>
                             </a>
                         </div>
                     </div> <!-- singel items -->
@@ -201,7 +239,7 @@
 
     <!--====== COURSE PART START ======-->
 
-    <section id="course-part" class="pt-115 pb-115">
+    <section id="course-part" class="pt-30 pb-115">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -230,7 +268,7 @@
                                     </div>
                                     <div class="course-teacher">
                                         <div class="thum">
-                                            <a href="#"><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '" />' ?></a>
+                                            <a href="<?php echo $row['id'];  ?>"><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '" width=50px />' ?></a>
                                         </div>
                                         <div class="name">
                                             <a href="#">
@@ -263,13 +301,30 @@
     <!--====== COURSE PART ENDS ======-->
 
     <!--====== COUNT DOWN PART START ======-->
+    <?php
+    if (isset($_POST['signup-button'])) {
+        $username = $_POST['student-name'];
+        $email = $_POST['student-email'];
+        $phone = $_POST['student-phone'];
+        $address = $_POST['student-email'];
+        $selected_courses = $_POST['student-name'];
 
+        $sql = "INSERT INTO `registerd_users`(`user_id`, `username`, `email`, `phone`, `address`, `selected_courses`, `created_date`) 
+        VALUES ('$user_id ', '$username','$email','$phone','$address','$selected_courses',date('d/m/y'))";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    }
+    ?>
     <section id="count-down-part" class="bg_cover pt-70 pb-120" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6">
                     <div class="count-down-cont pt-50">
-                        <h3>Get 100s of online Courses For Free</h3>
+                        <h3>Get Yourself registerd For Free</h3>
                         <h2>Sign up Now</h2>
                         <div data-countdown="2019/03/01"></div>
                     </div> <!-- count down cont -->
@@ -277,22 +332,35 @@
                 <div class="col-lg-5 offset-lg-1 col-md-8">
                     <div class="category-form category-form-3 pt-50">
                         <div class="form-title text-center">
-                            <h3>Get 50 courses free!</h3>
+                            <h3>Limited Seats!</h3>
                             <span>Sign up now </span>
                         </div>
                         <div class="main-form">
-                            <form action="#">
+                            <form method="POST" autocomplete="off">
                                 <div class="singel-form">
-                                    <input type="text" placeholder="Your name">
+                                    <input type="text" name="student-name" id="student-name" placeholder="Your name" required>
                                 </div>
                                 <div class="singel-form">
-                                    <input type="email" placeholder="Your Mail">
+                                    <input type="email" name="student-email" id="student-email" placeholder="Your Mail" required>
                                 </div>
                                 <div class="singel-form">
-                                    <input type="text" placeholder="Your Phone">
+                                    <input type="text" name="student-phone" id="student-phone" placeholder="Your Phone" required>
                                 </div>
                                 <div class="singel-form">
-                                    <button class="main-btn" type="button">Get it Now</button>
+                                    <input type="text" name="student-address" id="student-address" placeholder="Your Address" required>
+                                </div>
+                                <!-- <div class="singel-form">
+                                    <input type="checkbox" name="" id="" value="PHP"> Content Writing
+                                    <input type="checkbox" name="" id="" value="PHP"> Graphic Design
+                                    <input type="checkbox" name="" id="" value="PHP">Web development
+                                    <input type="checkbox" name="" id="" value="PHP"> Android development
+                                    <input type="checkbox" name="" id="" value="PHP">Unity Game development
+                                    <input type="checkbox" name="" id="" value="PHP">Programming Fundamentals
+                                    <input type="checkbox" name="" id="" value="PHP"> MS Office
+                                    <input type="checkbox" name="" id="" value="PHP">Social Media Marketing
+                                </div> -->
+                                <div class="singel-form">
+                                    <button class="main-btn" name="signup-button">Get it Now</button>
                                 </div>
                             </form>
                         </div>
@@ -311,198 +379,42 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="singel-counter counter-3 text-center mt-40">
-                        <span><span class="counter">30,000</span>+</span>
+                        <span><span class="counter"><?php echo $total_student; ?></span>+</span>
                         <p>Students enrolled</p>
                     </div> <!-- singel counter -->
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="singel-counter counter-3 text-center mt-40">
-                        <span><span class="counter">41,000</span>+</span>
-                        <p>Courses Uploaded</p>
+                        <span><span class="counter"><?php echo $total_courses; ?></span>+</span>
+                        <p>Available Courses</p>
                     </div> <!-- singel counter -->
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="singel-counter counter-3 text-center mt-40">
-                        <span><span class="counter">11,000</span>+</span>
-                        <p>People certifie</p>
+                        <span><span class="counter"><?php echo $certified_students; ?></span>+</span>
+                        <p>People certified</p>
                     </div> <!-- singel counter -->
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="singel-counter counter-3 text-center mt-40">
-                        <span><span class="counter">39,000</span>+</span>
-                        <p>Global Teachers</p>
+                        <span><span class="counter"><?php echo $total_teachers; ?></span>+</span>
+                        <p>Our Teachers</p>
                     </div> <!-- singel counter -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
     </div>
-
     <!--====== COUNTER PART ENDS ======-->
 
     <!--====== EVENT 2 PART START ======-->
-
-    <section id="event-part" class="pt-120 pb-120">
-        <div class="container">
-            <div class="event-bg bg_cover" style="background-image: url(images/bg-3.jpg)">
-                <div class="row">
-                    <div class="col-lg-5 offset-lg-6 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-                        <div class="event-2 pt-90 pb-70">
-                            <div class="event-title">
-                                <h3>Upcoming events</h3>
-                            </div> <!-- event title -->
-                            <ul>
-                                <li>
-                                    <div class="singel-event">
-                                        <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                        <a href="events-singel.php">
-                                            <h4>Campus clean workshop</h4>
-                                        </a>
-                                        <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                        <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="singel-event">
-                                        <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                        <a href="events-singel.php">
-                                            <h4>Tech Summit</h4>
-                                        </a>
-                                        <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                        <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="singel-event">
-                                        <span><i class="fa fa-calendar"></i> 2 December 2018</span>
-                                        <a href="events-singel.php">
-                                            <h4>Enviroement conference</h4>
-                                        </a>
-                                        <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
-                                        <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div> <!-- event 2 -->
-                    </div>
-                </div> <!-- row -->
-            </div>
-        </div> <!-- container -->
-    </section>
-
     <!--====== EVENT 2 PART ENDS ======-->
 
     <!--====== TEACHERS PART START ======-->
-
-    <section id="teachers-part" class="pt-65 pb-120 gray-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-title mt-50 pb-25">
-                        <h5>Top Tutors</h5>
-                        <h2>Featured Teachers</h2>
-                    </div> <!-- section title -->
-                    <div class="teachers-2">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="teachers-2-singel mt-30">
-                                    <div class="thum">
-                                        <img src="images/teachers/teacher-2/tc-1.jpg" alt="Teacher">
-                                    </div>
-                                    <div class="cont">
-                                        <a href="teachers-singel.php">
-                                            <h5>Mark anthem</h5>
-                                        </a>
-                                        <p>JAVA Expert</p>
-                                        <span><i class="fa fa-book"></i>10 Courses</span>
-                                    </div>
-                                </div> <!-- teachers 2 singel -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="teachers-2-singel mt-30">
-                                    <div class="thum">
-                                        <img src="images/teachers/teacher-2/tc-2.jpg" alt="Teacher">
-                                    </div>
-                                    <div class="cont">
-                                        <a href="teachers-singel.php">
-                                            <h5>Hellen Mark</h5>
-                                        </a>
-                                        <p>Laravel Expert</p>
-                                        <span><i class="fa fa-book"></i>05 Courses</span>
-                                    </div>
-                                </div> <!-- teachers 2 singel -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="teachers-2-singel mt-30">
-                                    <div class="thum">
-                                        <img src="images/teachers/teacher-2/tc-1.jpg" alt="Teacher">
-                                    </div>
-                                    <div class="cont">
-                                        <a href="teachers-singel.php">
-                                            <h5>Maria Noor</h5>
-                                        </a>
-                                        <p>JAVA Expert</p>
-                                        <span><i class="fa fa-book"></i>10 Courses</span>
-                                    </div>
-                                </div> <!-- teachers 2 singel -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="teachers-2-singel mt-30">
-                                    <div class="thum">
-                                        <img src="images/teachers/teacher-2/tc-1.jpg" alt="Teacher">
-                                    </div>
-                                    <div class="cont">
-                                        <a href="teachers-singel.php">
-                                            <h5>Alan hen</h5>
-                                        </a>
-                                        <p>Laravel Expert</p>
-                                        <span><i class="fa fa-book"></i>05 Courses</span>
-                                    </div>
-                                </div> <!-- teachers 2 singel -->
-                            </div>
-                        </div> <!-- row -->
-                    </div> <!-- teachers 2 -->
-                </div>
-                <div class="col-lg-6 ">
-                    <div class="happy-student mt-55">
-                        <div class="happy-title">
-                            <h3>Happy Students</h3>
-                        </div>
-                        <div class="student-slied">
-                            <div class="singel-student">
-                                <img src="images/teachers/teacher-2/quote.png" alt="Quote">
-                                <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet</p>
-                                <h6>Mark anthem</h6>
-                                <span>Bsc, Engineering</span>
-                            </div> <!-- singel student -->
-
-                            <div class="singel-student">
-                                <img src="images/teachers/teacher-2/quote.png" alt="Quote">
-                                <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet</p>
-                                <h6>Mark anthem</h6>
-                                <span>Bsc, Engineering</span>
-                            </div> <!-- singel student -->
-
-                            <div class="singel-student">
-                                <img src="images/teachers/teacher-2/quote.png" alt="Quote">
-                                <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet</p>
-                                <h6>Mark anthem</h6>
-                                <span>Bsc, Engineering</span>
-                            </div> <!-- singel student -->
-                        </div> <!-- student slied -->
-                        <div class="student-image">
-                            <img src="images/teachers/teacher-2/happy.png" alt="Image">
-                        </div>
-                    </div> <!-- happy student -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
     <!--====== TEACHERS PART ENDS ======-->
 
     <!--====== NEWS PART START ======-->
 
-    <section id="news-part" class="pt-115 pb-110">
+    <section id="news-part" class="pt-30 pb-110">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -608,32 +520,32 @@
             <div class="row patnar-slied">
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/p-1.png" alt="Logo">
+                        <img src="images/patnar-logo/shahfoundation.jpg" alt="Logo">
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/p-2.png" alt="Logo">
+                        <img src="images/patnar-logo/shahmani.jpg" alt="Logo">
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/p-3.png" alt="Logo">
+                        <img src="images/patnar-logo/shahpress.jpg" alt="Logo">
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/p-4.png" alt="Logo">
+                        <img src="images/patnar-logo/shahmani.jpg" alt="Logo">
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/p-2.png" alt="Logo">
+                        <img src="images/patnar-logo/shahfoundation.jpg" alt="Logo">
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/p-3.png" alt="Logo">
+                        <img src="images/patnar-logo/shahpress.jpg" alt="Logo">
                     </div>
                 </div>
             </div> <!-- row -->
@@ -653,9 +565,6 @@
     <!--====== BACK TO TP PART ENDS ======-->
     <?php include("jsScripts.php"); ?>
     <!--====== BACK TO TP PART ENDS ======-->
-
-
-
 
 </body>
 
