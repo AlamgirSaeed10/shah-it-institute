@@ -530,7 +530,7 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/shahpress.jpg" alt="Logo">
+                        <img src="images/patnar-logo/shahcandyworld.jpg" alt="Logo">
                     </div>
                 </div>
                 <div class="col-lg-12">
