@@ -24,8 +24,14 @@
                                   <li class="nav-item">
                                       <a href="courses.php">Courses</a>
                                       <ul class="sub-menu">
-                                          <li><a href="courses.php">Courses</a></li>
-                                          <li><a href="courses-singel.php">Course Singel</a></li>
+                                          <li><a href="courses-singel.php">Programming Fundamentals</a></li>
+                                          <li><a href="courses-singel.php">Graphic Design</a></li>
+                                          <li><a href="courses-singel.php">Mobile App Development</a></li>
+                                          <li><a href="courses-singel.php">Web App Development</a></li>
+                                          <li><a href="courses-singel.php">Unity Mobile Game Development</a></li>
+                                          <li><a href="courses-singel.php">Microsoft Office</a></li>
+                                          <li><a href="courses-singel.php">English Language Proficiency</a></li>
+                                          <li><a href="courses-singel.php">Content Writing</a></li>
                                       </ul>
                                   </li>
                                   <li class="nav-item">
@@ -38,8 +44,21 @@
                                   <li class="nav-item">
                                       <a href="teachers.php">Our teachers</a>
                                       <ul class="sub-menu">
-                                          <li><a href="teachers.php">teachers</a></li>
-                                          <li><a href="teachers-singel.php">teacher Singel</a></li>
+                                          <ul class="sub-menu">
+                                              <li>
+                                                  <a href="teachers.php">teachers</a>
+                                              </li>
+                                              <li>
+                                                  <a href="teachers.php">teachers</a>
+                                              </li>
+                                              <li>
+                                                  <a href="teachers.php">teachers</a>
+                                              </li>
+                                              <li>
+                                                  <a href="teachers.php">teachers</a>
+                                              </li>
+                                          </ul>
+                                          <!-- <li><a href="teachers-singel.php">teacher Singel</a></li> -->
                                       </ul>
                                   </li>
                                   <li class="nav-item">
@@ -63,7 +82,7 @@
                   <div class="col-lg-1 col-md-2 col-sm-3 col-3">
                       <div class="right-icon text-right">
                           <ul>
-                              <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                              <!-- <li><a href="#" id="search"><i class="fa fa-search"></i></a></li> -->
                           </ul>
                       </div> <!-- right icon -->
                   </div>

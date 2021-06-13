@@ -1,13 +1,3 @@
-/*
-  Theme Name: Edubin - LMS Education HTML Template
-  Author: Humayun Ahmed
-  Author URL: https://themeforest.net/user/pixelcurve
-  Support: humayunahmed82@gmail.com
-  Description: Creative  HTML5 template.
-  Version: 1.0
-*/
-
-
 $(function() {
     
     "use strict";
@@ -15,7 +5,7 @@ $(function() {
     //===== Prealoder
     
     $(window).on('load', function(event) {
-        $('.preloader').delay(500).fadeOut(500);
+        $('.preloader').delay(1000).fadeOut(1000);
     });
     
     

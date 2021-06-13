@@ -1,12 +1,48 @@
- <div class="preloader">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .logo {
+            -webkit-animation: spin 5s infinite;
+            animation: spin 5s infinite;
+        }
+
+        @-webkit-keyframes spin {
+            from {
+                -webkit-transform: rotateY(0deg);
+            }
+
+            to {
+                -webkit-transform: rotateY(-0deg);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                -moz-transform: rotateY(0deg);
+                -ms-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+
+            to {
+                -moz-transform: rotateY(-360deg);
+                -ms-transform: rotateY(-360deg);
+                transform: rotateY(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
         <div class="loader rubix-cube">
-            <div class="layer layer-1"></div>
-            <div class="layer layer-2"></div>
-            <div class="layer layer-3 color-1"></div>
-            <div class="layer layer-4"></div>
-            <div class="layer layer-5"></div>
-            <div class="layer layer-6"></div>
-            <div class="layer layer-7"></div>
-            <div class="layer layer-8"></div>
+            <div class="logo">
+                <img src="images/logo.png" alt="shah IT Institute logo">
+            </div>
         </div>
     </div>
+
+</body>
+
+</html>

@@ -11,7 +11,7 @@
 <body>
 
     <!--====== PRELOADER PART START ======-->
-    <!-- <?php include("splash-loader.php"); ?> -->
+    <?php include("splash-loader.php"); ?>
     <!--====== PRELOADER PART START ======-->
 
     <!--====== HEADER PART START ======-->
@@ -51,40 +51,7 @@
         while ($row = mysqli_fetch_array($result)) {
             $total_teachers = $row['COUNT(id)'];
         }
-    }
-
-    ?>
-    <!--====== SEARCH BOX PART START ======-->
-    <?php
-    if (isset($_POST['submit'])) {
-        $user_search = $_POST['search-course'];
-        $sql = "SELECT * FROM courses WHERE `course_name`= '$user_search'";
-
-        $result = $conn->query($sql);
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_array($result)) {
-                echo $row['course_name'];
-            }
-        } else {
-
-            echo "Course not available";
-        }
-    }
-    ?>
-    <div class="search-box">
-        <div class="serach-form">
-            <div class="closebtn">
-                <span></span>
-                <span></span>
-            </div>
-            <form method="POST" autocomplete="off">
-                <input type="text" name="search-course" id="search-course" placeholder="Search by keyword">
-                <button name="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div> <!-- serach form -->
-    </div>
-
-    <!--====== SEARCH BOX PART ENDS ======-->
+    } ?>
 
     <!--====== SLIDER PART START ======-->
     <?php
@@ -326,14 +293,17 @@
                     <div class="count-down-cont pt-50">
                         <h3>Get Yourself registerd For Free</h3>
                         <h2>Sign up Now</h2>
-                        <div data-countdown="2019/03/01"></div>
+                        <div data-countdown="2021/06/19">
+
+                        </div>
                     </div> <!-- count down cont -->
                 </div>
-                <div class="col-lg-5 offset-lg-1 col-md-8">
+                <div class="col-lg-5 offset-lg-1 col-md-10">
                     <div class="category-form category-form-3 pt-50">
                         <div class="form-title text-center">
-                            <h3>Limited Seats!</h3>
+                            <h3>Limited Seats Available!</h3>
                             <span>Sign up now </span>
+                            <p style="color: white;">Register youself to get 10% discount on all our courses</p>
                         </div>
                         <div class="main-form">
                             <form method="POST" autocomplete="off">
@@ -517,6 +487,14 @@
 
     <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
         <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-20">
+                        <h5>Sponsors</h5>
+                        <h2>Our Partners</h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
             <div class="row patnar-slied">
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
