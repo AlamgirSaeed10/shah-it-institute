@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `certified_students`
 --
 
-CREATE TABLE `certified_students` (
+CREATE TABLE IF NOT EXISTS  `certified_students` (
   `id` int(11) NOT NULL,
   `student_name` varchar(255) NOT NULL,
   `course_name` varchar(255) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE `certified_students` (
 -- Table structure for table `courses`
 --
 
-CREATE TABLE `courses` (
+CREATE TABLE IF NOT EXISTS  `courses` (
   `id` int(11) NOT NULL,
   `course_id` varchar(255) NOT NULL,
   `course_name` varchar(255) NOT NULL,
@@ -64,7 +64,7 @@ INSERT INTO `courses` (`id`, `course_id`, `course_name`, `course_category`) VALU
 -- Table structure for table `courses_detail`
 --
 
-CREATE TABLE `courses_detail` (
+CREATE TABLE IF NOT EXISTS  `courses_detail` (
   `id` int(11) NOT NULL,
   `course_id` varchar(255) NOT NULL,
   `course_name` varchar(255) NOT NULL,
@@ -189,7 +189,7 @@ INSERT INTO `course_deatil` (`id`, `course_id`, `course_name`, `course_category`
 -- Table structure for table `our_teachers`
 --
 
-CREATE TABLE `our_teachers` (
+CREATE TABLE IF NOT EXISTS  `our_teachers` (
   `id` int(11) NOT NULL,
   `teacher_name` varchar(255) NOT NULL,
   `teacher_qualification` varchar(255) NOT NULL,
@@ -202,7 +202,7 @@ CREATE TABLE `our_teachers` (
 -- Table structure for table `registerd_users`
 --
 
-CREATE TABLE `registerd_users` (
+CREATE TABLE IF NOT EXISTS `registerd_users` (
   `id` int(11) NOT NULL,
   `user_id` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
