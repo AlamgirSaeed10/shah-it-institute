@@ -3,15 +3,14 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-<!--====== Title ======-->
-<title>Shah It Institute</title>  
- 
-<!--====== Favicon Icon ======-->
-<link rel="shortcut icon" href="images/shah-it-institute-logo.png" type="image/png">
 
+<!--====== Title ======-->
+<title>Shah It Institute</title>
+
+<!--====== Favicon Icon ======-->
+<link rel="shortcut icon" href="images/logo.png" type="image/png">
 <!--====== Slick css ======-->
-<link rel="stylesheet" href="css/slick.css">
+<link rel=" stylesheet" href="css/slick.css">
 
 <!--====== Animate css ======-->
 <link rel="stylesheet" href="css/animate.css">
