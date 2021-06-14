@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2021 at 07:58 AM
+-- Generation Time: Jun 14, 2021 at 01:59 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `certified_students`
 --
 
-CREATE TABLE IF NOT EXISTS  `certified_students` (
+CREATE TABLE `certified_students` (
   `id` int(11) NOT NULL,
   `student_name` varchar(255) NOT NULL,
   `course_name` varchar(255) NOT NULL,
@@ -37,10 +37,26 @@ CREATE TABLE IF NOT EXISTS  `certified_students` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact_us`
+--
+
+CREATE TABLE `contact_us` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `message_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `courses`
 --
 
-CREATE TABLE IF NOT EXISTS  `courses` (
+CREATE TABLE `courses` (
   `id` int(11) NOT NULL,
   `course_id` varchar(255) NOT NULL,
   `course_name` varchar(255) NOT NULL,
@@ -64,7 +80,7 @@ INSERT INTO `courses` (`id`, `course_id`, `course_name`, `course_category`) VALU
 -- Table structure for table `courses_detail`
 --
 
-CREATE TABLE IF NOT EXISTS  `courses_detail` (
+CREATE TABLE `courses_detail` (
   `id` int(11) NOT NULL,
   `course_id` varchar(255) NOT NULL,
   `course_name` varchar(255) NOT NULL,
@@ -189,7 +205,7 @@ INSERT INTO `course_deatil` (`id`, `course_id`, `course_name`, `course_category`
 -- Table structure for table `our_teachers`
 --
 
-CREATE TABLE IF NOT EXISTS  `our_teachers` (
+CREATE TABLE `our_teachers` (
   `id` int(11) NOT NULL,
   `teacher_name` varchar(255) NOT NULL,
   `teacher_qualification` varchar(255) NOT NULL,
@@ -202,7 +218,7 @@ CREATE TABLE IF NOT EXISTS  `our_teachers` (
 -- Table structure for table `registerd_users`
 --
 
-CREATE TABLE IF NOT EXISTS `registerd_users` (
+CREATE TABLE `registerd_users` (
   `id` int(11) NOT NULL,
   `user_id` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
@@ -231,6 +247,12 @@ INSERT INTO `registerd_users` (`id`, `user_id`, `username`, `email`, `phone`, `a
 -- Indexes for table `certified_students`
 --
 ALTER TABLE `certified_students`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contact_us`
+--
+ALTER TABLE `contact_us`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -271,6 +293,12 @@ ALTER TABLE `registerd_users`
 -- AUTO_INCREMENT for table `certified_students`
 --
 ALTER TABLE `certified_students`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `contact_us`
+--
+ALTER TABLE `contact_us`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
