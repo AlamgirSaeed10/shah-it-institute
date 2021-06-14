@@ -2,10 +2,12 @@
       <div class="navigation navigation-2 navigation-3">
           <div class="container">
               <div class="row no-gutters">
-                  <div class="col-lg-11 col-md-10 col-sm-9 col-9">
+                  <div class="col-lg-11 col-md-10 col-sm-9 col-12">
                       <nav class="navbar navbar-expand-lg">
                           <a class="navbar-brand" href="index.php">
+                          <div class="logo">
                               <img src="images/logo.png" alt="shah IT institute logo" style="width: 80px;">
+                          </div>
                           </a>
                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                               <span class="icon-bar"></span>

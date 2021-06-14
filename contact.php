@@ -134,7 +134,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>Chaudhary heights first floor, Citi housing Jhelum Punjab </p>
+                                        <p>Ch heights first floor, Citi housing Jhelum Punjab </p>
                                     </div>
                                 </div> <!-- singel address -->
                             </li>

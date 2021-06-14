@@ -5,14 +5,13 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-about mt-40">
                         <div class="logo">
-                            <a href="#"><img src="images/logo.png" alt="Logo"></a>
+                            <a href="index.php"><img src="images/logo.png" alt="Logo"></a>
                         </div>
                         <!-- <p>Gravida nibh vel velit auctor aliquetn quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate.</p> -->
                         <ul class="mt-20">
                             <li><a href="https://www.facebook.com/shahitinstitute"><i class="fa fa-facebook-f"></i></a></li>
                             <li><a href="https://www.twitter.com/shahitinstitute"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://www.instagram.com/shahitinstitute/">
-                                    <i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.instagram.com/shahitinstitute/"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="mailto:info@shahitinstitute.com"><i class="fa fa-envelope"></i></a></li>
                         </ul>
                     </div> <!-- footer about -->
@@ -55,7 +54,7 @@
                                     <i class="fa fa-home"></i>
                                 </div>
                                 <div class="cont">
-                                    <p>Ch heights First floor Citi Housing Jhelum</p>
+                                    <p>Ch heights first floor, Citi housing Jhelum Punjab</p>
                                 </div>
                             </li>
                             <li>
@@ -63,7 +62,7 @@
                                     <i class="fa fa-phone"></i>
                                 </div>
                                 <div class="cont">
-                                    <p>+3 123 456 789</p>
+                                    <p>+92 544-225094</p>
                                 </div>
                             </li>
                             <li>
@@ -71,7 +70,7 @@
                                     <i class="fa fa-envelope-o"></i>
                                 </div>
                                 <div class="cont">
-                                    <p>info@yourmail.com</p>
+                                    <p>info@shahitinstitute.com</p>
                                 </div>
                             </li>
                         </ul>
