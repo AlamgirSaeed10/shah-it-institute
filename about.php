@@ -5,10 +5,45 @@
     <?php include("database/connection.php"); ?>
     <?php include("link-libraries.php"); ?>
 </head>
+<?php
+$sql = "SELECT COUNT(id) FROM `registerd_users`";
+// SELECT * FROM `certified_students`
+
+$result = $conn->query($sql);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_array($result)) {
+        $total_student = $row['COUNT(id)'];
+    }
+}
+$sql = "SELECT COUNT(id) FROM `certified_students`";
+// SELECT * FROM `certified_students`
+
+$result = $conn->query($sql);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_array($result)) {
+        $certified_students = $row['COUNT(id)'];
+    }
+}
+$sql = "SELECT COUNT(id) FROM `courses`";
+
+$result = $conn->query($sql);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_array($result)) {
+        $total_courses = $row['COUNT(id)'];
+    }
+}
+$sql = "SELECT COUNT(id) FROM `our_teachers`";
+
+$result = $conn->query($sql);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_array($result)) {
+        $total_teachers = $row['COUNT(id)'];
+    }
+} ?>
 
 <body>
- <!--====== PRELOADER PART START ======-->
- <?php include("splash-loader.php"); ?>
+    <!--====== PRELOADER PART START ======-->
+    <?php include("splash-loader.php"); ?>
     <!--====== PRELOADER PART START ======-->
 
     <!--====== HEADER PART START ======-->
@@ -45,58 +80,58 @@
                 <div class="col-lg-5">
                     <div class="section-title mt-50">
                         <h5>About us</h5>
-                        <h3>Welcome to Shah IT Institute</h3>
+                        <h2>Welcome to <br>Shah IT Institute</h2>
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p>Shah IT Institute (SITI) – as the name suggests, is an IT institute project by 
-                            Shah Corporation Limited. The purpose of an Information Technology Institution 
-                            is to equip students with theoretical knowledge as well as the skill set that meets 
-                            the requirements of the IT companies. Whether it is the designing, development 
-                            or testing of software, all the things are a part of our IT courses. 
-                            The students planning to pursue expertise in IT must realize the fact that these 
-                            courses include the core concepts of database management systems, Java programming, 
-                            information security, analysis of the algorithm, computer networking, 
-                            ERP, E-commerce, cloud computing, software engineering and many other things 
+                        <p>Shah IT Institute (SITI) – as the name suggests, is an IT institute project by
+                            Shah Corporation Limited. The purpose of an Information Technology Institution
+                            is to equip students with theoretical knowledge as well as the skill set that meets
+                            the requirements of the IT companies. Whether it is the designing, development
+                            or testing of software, all the things are a part of our IT courses.
+                            The students planning to pursue expertise in IT must realize the fact that these
+                            courses include the core concepts of database management systems, Java programming,
+                            information security, analysis of the algorithm, computer networking,
+                            ERP, E-commerce, cloud computing, software engineering and many other things
                             related to operating systems.</p>
                     </div>
                 </div> <!-- about cont -->
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
-                        <img src="images/about/about-2.jpg" alt="About">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="About">
                     </div> <!-- about imag -->
                 </div>
             </div> <!-- row -->
             <div class="about-items pt-60">
                 <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="about-singel-items mt-30">
+                    <div class="col-lg-12 col-md-6 col-sm-10">
+                        <div class="about-singel-items">
                             <span>01</span>
                             <h4>Why Choose us</h4>
-                            <p>Our Institute is destined for the welfare of youth who strive to build their career. 
-                                Unfortunately, educational institutes are more inclined towards the traditional 
-                                methods of teaching students which only address theoretical knowledge. 
-                                We have witnessed individuals who seek practical experience even after 
-                                the undergraduate studies of Computer Sciences. We want to change this narrative. 
-                                Students must know what they are best made for and where their interest lies. 
-                                To do so, SITI has introduced several IT related courses to provide functional 
+                            <p>Our Institute is destined for the welfare of youth who strive to build their career.
+                                Unfortunately, educational institutes are more inclined towards the traditional
+                                methods of teaching students which only address theoretical knowledge.
+                                We have witnessed individuals who seek practical experience even after
+                                the undergraduate studies of Computer Sciences. We want to change this narrative.
+                                Students must know what they are best made for and where their interest lies.
+                                To do so, SITI has introduced several IT related courses to provide functional
                                 training that actually benefits them in choosing their career or specialization field.
-</p>
+                            </p>
                         </div> <!-- about singel -->
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="col-lg-6 col-md-6 col-sm-10">
                         <div class="about-singel-items mt-30">
                             <span>02</span>
                             <h4>Our Mission</h4>
-                            <p>The mission of Shah IT Institute is to make quality education available to all the 
-                                students ensuring affordability. We want to make a difference in the world of 
+                            <p>The mission of Shah IT Institute is to make quality education available to all
+                                students ensuring affordability. We want to make a difference in the world of
                                 IT that revolves specifically around Pakistan.</p>
                         </div> <!-- about singel -->
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="col-lg-6 col-md-6 col-sm-10">
                         <div class="about-singel-items mt-30">
                             <span>03</span>
                             <h4>Our vission</h4>
-                            <p>Our vision is to create an agile workforce in the youth of Pakistan so that they can leave a mark by representing their country in the global IT world.</p>
+                            <p>Our vision is to create an agile workforce in the youth of Pakistan so that they can leave a mark by representing their country in the global Information Technology world.</p>
                         </div> <!-- about singel -->
                     </div>
                 </div> <!-- row -->
@@ -113,26 +148,26 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">30,000</span>+</span>
+                        <span><span class="counter"><?php echo $total_student; ?></span>+</span>
                         <p>Students enrolled</p>
                     </div> <!-- singel counter -->
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">41,000</span>+</span>
+                        <span><span class="counter"><?php echo $total_courses; ?></span>+</span>
                         <p>Courses Uploaded</p>
                     </div> <!-- singel counter -->
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">11,000</span>+</span>
-                        <p>People certifie</p>
+                        <span><span class="counter"><?php echo $certified_students; ?></span>+</span>
+                        <p>Certified People</p>
                     </div> <!-- singel counter -->
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="singel-counter text-center mt-40">
-                        <span><span class="counter">39,000</span>+</span>
-                        <p>Global Teachers</p>
+                        <span><span class="counter"><?php echo $total_teachers; ?></span>+</span>
+                        <p>Our Teachers</p>
                     </div> <!-- singel counter -->
                 </div>
             </div> <!-- row -->
@@ -328,8 +363,8 @@
 
     <!--====== TEASTIMONIAL PART ENDS ======-->
 
-     <!--====== PATNAR LOGO PART START ======-->
-     <?php include("partner-logos.php"); ?>
+    <!--====== PATNAR LOGO PART START ======-->
+    <?php include("partner-logos.php"); ?>
     <!--====== PATNAR LOGO PART ENDS ======-->
 
     <!--====== FOOTER PART START ======-->

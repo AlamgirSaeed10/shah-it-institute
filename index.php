@@ -53,7 +53,7 @@
         }
     } ?>
 
-    
+
 
     <!--====== SLIDER PART START ======-->
     <?php
@@ -101,43 +101,7 @@
                     </div> <!-- slider cont3 -->
                 </div>
             </div> <!-- row -->
-            <div class="slider-feature pt-30 d-none d-md-block">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singel-slider-feature justify-content-center mt-30">
-                            <div class="icon">
-                                <img src="images/all-icon/man.png" alt="icon">
-                            </div>
-                            <div class="cont">
-                                <h3><?php echo $total_student; ?>+</h3>
-                                <span>Overall Students</span>
-                            </div>
-                        </div> <!-- singel slider feature -->
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singel-slider-feature justify-content-center mt-30">
-                            <div class="icon">
-                                <img src="images/all-icon/book.png" alt="icon">
-                            </div>
-                            <div class="cont">
-                                <h3><?php echo $total_courses; ?>+</h3>
-                                <span>Available Courses</span>
-                            </div>
-                        </div> <!-- singel slider feature -->
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singel-slider-feature justify-content-center mt-30">
-                            <div class="icon">
-                                <img src="images/all-icon/expert.png" alt="icon">
-                            </div>
-                            <div class="cont">
-                                <h3><?php echo $total_teachers; ?></h3>
-                                <span>Expert Instructors</span>
-                            </div>
-                        </div> <!-- singel slider feature -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- slider feature -->
+            <!-- slider feature -->
         </div> <!-- container -->
     </section>
 
@@ -194,8 +158,7 @@
                         </div>
                         <div class="items-cont">
                             <a href="#">
-                                <h5>Game development</h5>
-                                <span></span>
+                                <h5>Game development</h5>sss
                             </a>
                         </div>
                     </div> <!-- singel items -->

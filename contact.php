@@ -110,7 +110,7 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="singel-form form-group">
-                                                <textarea name="message" placeholder="Messege" data-error="Please,leave us a message." required="required"></textarea>
+                                                <textarea name="message" placeholder="Message" data-error="Please,leave us a message." required="required"></textarea>
                                                 <div class="help-block with-errors"></div>
                                             </div> <!-- singel form -->
                                         </div>

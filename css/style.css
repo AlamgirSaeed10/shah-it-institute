@@ -1055,7 +1055,7 @@ p {
 .slider-cont-3 {
   position: relative;
   z-index: 5;
-  background-color: rgba(7, 41, 77, 0.8);
+  background-color: rgb(65 65 65 / 53%);
   padding: 70px 100px 80px;
 }
 .slider-cont-3 h2 {
@@ -2493,7 +2493,7 @@ p {
 .page-banner-cont {
   position: relative;
   z-index: 5;
-  margin-top:20px !important;
+  margin-top: 20px !important;
 }
 .page-banner-cont h2 {
   font-size: 52px;
@@ -3973,9 +3973,13 @@ p.form-message.error {
 .contact-address .contact-heading h5 {
   padding-bottom: 15px;
 }
-.about-singel-items1 {
+.about-singel-items {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: #fff;
+}
+.about-singel-items:hover {
+  /* box-shadow: 0 4px 8px 0 #07294d; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
