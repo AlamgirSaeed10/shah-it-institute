@@ -3993,13 +3993,3 @@ p.form-message.error {
 .contact-address .contact-heading h5 {
   padding-bottom: 15px;
 }
-p#alert-message-error {
-  padding: 20px;
-  background-color: #f44336;
-  color: white;
-}
-p#alert-message-success {
-  padding: 20px;
-  background-color: #3cb371;
-  color: white;
-}

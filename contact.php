@@ -43,11 +43,11 @@
     $error = "";
 
     if (isset($_POST['contact-submit'])) {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $subject = $_POST['subject'];
-        $message = $_POST['message'];
+        $name = addslashes($_POST['name']);
+        $email = addslashes($_POST['email']);
+        $phone = addslashes($_POST['phone']);
+        $subject = addslashes($_POST['subject']);
+        $message = addslashes($_POST['message']);
 
         $sql = "INSERT INTO `contact_us`(`name`, `email`, `subject`, `phone`, `message`,`message_date`) 
         VALUES ('$name','$email','$subject','$phone','$message',date('y/m/d'))";
@@ -73,13 +73,13 @@
                             <?php
                             if ($success) { ?>
                                 <div>
-                                    <p id="alert-message-success">
+                                    <p style=" padding: 20px;  background-color: #3cb371; color: white;">
                                         <strong>Success! </strong> <?php echo $success; ?>
                                     </p>
                                 </div><?php
-                                    } else { ?>
-                                <p id="alert-message-error">
-                                    <?php echo $success; ?>
+                                    } else if ($error) { ?>
+                                <p style="  padding: 20px; background-color: #f44336; color: white;">
+                                    <strong>Error! </strong> <?php echo $error; ?>
                                 <?php }
                                 ?>
                                 <form method="post" data-toggle="validator">
