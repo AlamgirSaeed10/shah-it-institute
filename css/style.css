@@ -3520,9 +3520,6 @@ p {
 .saidbar .saidbar-post ul li a .singel-post .thum img {
   border-radius: 5px;
 }
-
-.saidbar .saidbar-post ul li a .singel-post .cont {
-}
 .saidbar .saidbar-post ul li a .singel-post .cont h6 {
   font-weight: 600;
   font-size: 18px;
@@ -3585,8 +3582,6 @@ p {
 .blog-details .cont .share > li {
   display: inline-block;
   margin-right: 10px;
-}
-.blog-details .cont .share li a {
 }
 .blog-details .cont .share li a i {
   width: 35px;
@@ -3714,7 +3709,7 @@ p {
 }
 .shop-top-search .shop-select {
   display: inline-block;
-  float: right;
+  /* float: right; */
   margin-top: -3px;
 }
 
@@ -3793,9 +3788,6 @@ p {
   width: 100%;
   border-radius: 3px;
 }
-
-.shop-right {
-}
 .shop-right h6 {
   font-size: 18px;
   padding-bottom: 5px;
@@ -3847,9 +3839,6 @@ p {
 .add-btn .main-btn {
   line-height: 46px;
 }
-
-.shop-reviews .nav .nav-item {
-}
 .shop-reviews .nav .nav-item:first-child a {
   border-top-left-radius: 5px;
 }
@@ -3882,9 +3871,6 @@ p {
 .shop-reviews .tab-content .reviews-cont {
   padding: 0;
 }
-
-.releted-item {
-}
 .releted-item .title h3 {
   font-size: 30px;
   color: #07294d;
@@ -3898,8 +3884,6 @@ p {
   background-color: #fff;
   padding: 50px;
   border-radius: 5px;
-}
-.contact-from .main-form {
 }
 .contact-from .main-form .singel-form {
   margin-top: 20px;
@@ -3972,11 +3956,6 @@ p.form-message.error {
 }
 .contact-address ul li .singel-address .cont {
   padding-left: 20px;
-}
-.contact-address ul li .singel-address .cont p {
-}
-
-.map {
 }
 .map #contact-map {
   width: 100%;
