@@ -2,226 +2,21 @@
 <html lang="en">
 <head>
    
-    <!--====== Required meta tags ======-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!--====== Title ======-->
-    <title>Edubin - LMS Education HTML Template</title>
-    
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-
-    <!--====== Slick css ======-->
-    <link rel="stylesheet" href="css/slick.css">
-
-    <!--====== Animate css ======-->
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <!--====== Nice Select css ======-->
-    <link rel="stylesheet" href="css/nice-select.css">
-    
-    <!--====== Nice Number css ======-->
-    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
-
-    <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    
-    <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="css/default.css">
-    
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!--====== Responsive css ======-->
-    <link rel="stylesheet" href="css/responsive.css">
-  
-  
+<head>
+    <?php include("database/connection.php"); ?>
+    <?php include("link-libraries.php"); ?>
 </head>
 
 <body>
     
     <!--====== PRELOADER PART START ======-->
-    
-    <div class="preloader">
-        <div class="loader rubix-cube">
-            <div class="layer layer-1"></div>
-            <div class="layer layer-2"></div>
-            <div class="layer layer-3 color-1"></div>
-            <div class="layer layer-4"></div>
-            <div class="layer layer-5"></div>
-            <div class="layer layer-6"></div>
-            <div class="layer layer-7"></div>
-            <div class="layer layer-8"></div>
-        </div>
-    </div>
-    
+    <?php include("splash-loader.php"); ?>
     <!--====== PRELOADER PART START ======-->
-    
-    <!--====== HEADER PART START ======-->
-    
-    <header id="header-part">
-       
-        <div class="header-top d-none d-lg-block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="header-contact text-lg-left text-center">
-                            <ul>
-                                <li><img src="images/all-icon/map.png" alt="icon"><span>127/5 Mark street, New york</span></li>
-                                <li><img src="images/all-icon/email.png" alt="icon"><span>info@yourmail.com</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="header-opening-time text-lg-right text-center">
-                            <p>Opening Hours : Monday to Saturay - 8 Am to 5 Pm</p>
-                        </div>
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- header top -->
-        
-        <div class="header-logo-support pt-30 pb-30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                        <div class="logo">
-                            <a href="index-2.html">
-                                <img src="images/logo.png" alt="Logo">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-8">
-                        <div class="support-button float-right d-none d-md-block">
-                            <div class="support float-left">
-                                <div class="icon">
-                                    <img src="images/all-icon/support.png" alt="icon">
-                                </div>
-                                <div class="cont">
-                                    <p>Need Help? call us free</p>
-                                    <span>321 325 5678</span>
-                                </div>
-                            </div>
-                            <div class="button float-left">
-                                <a href="#" class="main-btn">Apply Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- header logo support -->
-        
-        <div class="navigation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-md-10 col-sm-9 col-8">
-                        <nav class="navbar navbar-expand-lg">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
 
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item">
-                                        <a class="active" href="index-2.html">Home</a>
-                                        <ul class="sub-menu">
-                                            <li><a class="active" href="index-2.html">Home 01</a></li>
-                                            <li><a href="index-3.html">Home 02</a></li>
-                                            <li><a href="index-4.html">Home 03</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="about.html">About us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="courses.html">Courses</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="courses.html">Courses</a></li>
-                                            <li><a href="courses-singel.html">Course Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="events.html">Events</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="events.html">Events</a></li>
-                                            <li><a href="events-singel.html">Event Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="teachers.html">Our teachers</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="teachers.html">teachers</a></li>
-                                            <li><a href="teachers-singel.html">teacher Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="blog.html">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-singel.html">Blog Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="shop.html">Shop</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="shop-singel.html">Shop Singel</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="contact.html">Contact</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="contact.html">Contact Us</a></li>
-                                            <li><a href="contact-2.html">Contact Us 2</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav> <!-- nav -->
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-4">
-                        <div class="right-icon text-right">
-                            <ul>
-                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-bag"></i><span>0</span></a></li>
-                            </ul>
-                        </div> <!-- right icon -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div>
-        
-    </header>
-    
+    <!--====== HEADER PART START ======-->
+    <?php include("header.php"); ?>
     <!--====== HEADER PART ENDS ======-->
-   
-    <!--====== SEARCH BOX PART START ======-->
-    
-    <div class="search-box">
-        <div class="serach-form">
-            <div class="closebtn">
-                <span></span>
-                <span></span>
-            </div>
-            <form action="#">
-                <input type="text" placeholder="Search by keyword">
-                <button><i class="fa fa-search"></i></button>
-            </form>
-        </div> <!-- serach form -->
-    </div>
-    
-    <!--====== SEARCH BOX PART ENDS ======-->
+
    
     <!--====== PAGE BANNER PART START ======-->
     
@@ -235,8 +30,7 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Blog</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Few tips for get better</li>
-                            </ol>
+                                </ol>
                         </nav>
                     </div>  <!-- page banner cont -->
                 </div>
@@ -247,209 +41,65 @@
     <!--====== PAGE BANNER PART ENDS ======-->
    
     <!--====== BLOG PART START ======-->
-    
+ 
+      
+
     <section id="blog-singel" class="pt-90 pb-120 gray-bg">
         <div class="container">
            <div class="row">
+           <?php
+                    $link = "";
+                    $title = "";
+                    $pubDate = "";
+                    $category ="";
+                    $description ="";
+                    
+                    $map_url = "https://www.techrepublic.com/rssfeeds/topic/tech-industry/"; 
+                    if (($response_xml_data = file_get_contents($map_url))===false){
+                        echo "Error fetching XML\n";
+                    } else {
+                    libxml_use_internal_errors(true);
+                    $data = simplexml_load_string($response_xml_data);
+                    if (!$data) {
+                        echo "Error loading XML\n";
+                        foreach(libxml_get_errors() as $error) {
+                            echo "\t", $error->message;
+                        }
+                    } else {
+                    
+                            $category  =  $data->channel->category;
+
+                        foreach($data->channel->item as $item)
+                        {
+                            $link =  (string)$item->link;
+                            $title = (string)$item->title;
+                            $pubDate = (string)$item->pubDate;
+                            $description = (string)$item->description;
+                            ?>
               <div class="col-lg-8">
                   <div class="blog-details mt-30">
                       <div class="thum">
                           <img src="images/blog/b-1.jpg" alt="Blog Details">
                       </div>
                       <div class="cont">
-                          <h3>Few tips for get better results in examination</h3>
+                          <h3><?php echo $title;?></h3>
                           <ul>
-                               <li><a href="#"><i class="fa fa-calendar"></i>25 Dec 2018</a></li>
-                               <li><a href="#"><i class="fa fa-user"></i>Mark anthem</a></li>
-                               <li><a href="#"><i class="fa fa-tags"></i>Education</a></li>
+                               <li><a href="#"><i class="fa fa-calendar"></i><?php echo " ".$pubDate;?></a></li>
+                               <li><a href="#"><i class="fa fa-tags"></i><?php echo $category?></a></li>
                            </ul>
-                           <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .
-                           <br>
-                           <br>
-                           gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .
-                           <br>
-                           <br>
-                           gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .
-                           </p>
-                           <ul class="share">
-                               <li class="title">Share :</li>
-                               <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                           </ul>
-                           <div class="blog-comment pt-45">
-                               <div class="title pb-15">
-                                   <h3>Comment (3)</h3>
-                               </div>  <!-- title -->
-                               <ul>
-                                   <li>
-                                       <div class="comment">
-                                           <div class="comment-author">
-                                                <div class="author-thum">
-                                                    <img src="images/review/r-1.jpg" alt="Reviews">
-                                                </div>
-                                                <div class="comment-name">
-                                                    <h6>Bobby Aktar</h6>
-                                                    <span>April 03, 2019</span>
-                                                </div>
-                                            </div>
-                                            <div class="comment-description pt-20">
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.</p>
-                                            </div>
-                                            <div class="comment-replay">
-                                                <a href="#">Reply</a>
-                                            </div>
-                                        </div> <!-- comment -->
-                                        <ul class="replay">
-                                           <li>
-                                               <div class="comment">
-                                                   <div class="comment-author">
-                                                        <div class="author-thum">
-                                                            <img src="images/review/r-2.jpg" alt="Reviews">
-                                                        </div>
-                                                        <div class="comment-name">
-                                                            <h6>Humayun Ahmed</h6>
-                                                            <span>April 03, 2019</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="comment-description pt-20">
-                                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                                                    </div>
-                                                    <div class="comment-replay">
-                                                        <a href="#">Reply</a>
-                                                    </div>
-                                                </div> <!-- comment -->
-                                           </li>
-                                       </ul>
-                                   </li>
-                                   <li>
-                                       <div class="comment">
-                                           <div class="comment-author">
-                                                <div class="author-thum">
-                                                    <img src="images/review/r-3.jpg" alt="Reviews">
-                                                </div>
-                                                <div class="comment-name">
-                                                    <h6>Bobby Aktar</h6>
-                                                    <span>April 03, 2019</span>
-                                                </div>
-                                            </div>
-                                            <div class="comment-description pt-20">
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.</p>
-                                            </div>
-                                            <div class="comment-replay">
-                                                <a href="#">Reply</a>
-                                            </div>
-                                        </div> <!-- comment -->
-                                   </li>
-                               </ul>
-                               <div class="title pt-45 pb-25">
-                                   <h3>Leave a comment</h3>
-                               </div> <!-- title -->
-                               <div class="comment-form">
-                                   <form action="#">
-                                       <div class="row">
-                                           <div class="col-md-6">
-                                               <div class="form-singel">
-                                                   <input type="text" placeholder="Name">
-                                               </div> <!-- form singel -->
-                                           </div>
-                                           <div class="col-md-6">
-                                               <div class="form-singel">
-                                                   <input type="email" placeholder="email">
-                                               </div> <!-- form singel -->
-                                           </div>
-                                           <div class="col-md-12">
-                                               <div class="form-singel">
-                                                   <textarea placeholder="Comment"></textarea>
-                                               </div> <!-- form singel -->
-                                           </div>
-                                           <div class="col-md-12">
-                                               <div class="form-singel">
-                                                   <button class="main-btn">Submit</button>
-                                               </div> <!-- form singel -->
-                                           </div>
-                                       </div> <!-- row -->
-                                   </form>
-                               </div>  <!-- comment-form -->
-                           </div> <!-- blog comment -->
+                           <p><?php echo $description; ?></p>
+                           <div class="singel-form">
+                                            <button type="submit" class="main-btn"><a href="<?php echo $link;?>"></a></button>
+                            </div>
                       </div> <!-- cont -->
                   </div> <!-- blog details -->
-              </div>
-               <div class="col-lg-4">
-                   <div class="saidbar">
-                       <div class="row">
-                           <div class="col-lg-12 col-md-6">
-                               <div class="saidbar-search mt-30">
-                                   <form action="#">
-                                       <input type="text" placeholder="Search">
-                                       <button type="button"><i class="fa fa-search"></i></button>
-                                   </form>
-                               </div> <!-- saidbar search -->
-                               <div class="categories mt-30">
-                                   <h4>Categories</h4>
-                                   <ul>
-                                       <li><a href="#">Fronted</a></li>
-                                       <li><a href="#">Backend</a></li>
-                                       <li><a href="#">Photography</a></li>
-                                       <li><a href="#">Teachnology</a></li>
-                                       <li><a href="#">GMET</a></li>
-                                       <li><a href="#">Language</a></li>
-                                       <li><a href="#">Science</a></li>
-                                       <li><a href="#">Accounting</a></li>
-                                   </ul>
-                               </div>
-                           </div> <!-- categories -->
-                           <div class="col-lg-12 col-md-6">
-                               <div class="saidbar-post mt-30">
-                                   <h4>Popular Posts</h4>
-                                   <ul>
-                                       <li>
-                                            <a href="#">
-                                                <div class="singel-post">
-                                                   <div class="thum">
-                                                       <img src="images/blog/blog-post/bp-1.jpg" alt="Blog">
-                                                   </div>
-                                                   <div class="cont">
-                                                       <h6>Introduction to languages</h6>
-                                                       <span>20 Dec 2018</span>
-                                                   </div>
-                                               </div> <!-- singel post -->
-                                            </a>
-                                       </li>
-                                       <li>
-                                            <a href="#">
-                                                <div class="singel-post">
-                                                   <div class="thum">
-                                                       <img src="images/blog/blog-post/bp-2.jpg" alt="Blog">
-                                                   </div>
-                                                   <div class="cont">
-                                                       <h6>How to build a game with java</h6>
-                                                       <span>10 Dec 2018</span>
-                                                   </div>
-                                               </div> <!-- singel post -->
-                                            </a>
-                                       </li>
-                                       <li>
-                                            <a href="#">
-                                                <div class="singel-post">
-                                                   <div class="thum">
-                                                       <img src="images/blog/blog-post/bp-1.jpg" alt="Blog">
-                                                   </div>
-                                                   <div class="cont">
-                                                       <h6>Basic accounting from primary</h6>
-                                                       <span>07 Dec 2018</span>
-                                                   </div>
-                                               </div> <!-- singel post -->
-                                            </a>
-                                       </li>
-                                   </ul>
-                               </div> <!-- saidbar post -->
-                           </div>
-                       </div> <!-- row -->
-                   </div> <!-- saidbar -->
-               </div>
+              </div> 
+              <?php   
+              }
+              }
+            }
+            ?>
+
            </div> <!-- row -->
         </div> <!-- container -->
     </section>

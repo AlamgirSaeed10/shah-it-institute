@@ -1,4 +1,4 @@
-  <header id="header-part">
+<header id="header-part">
       <div class="navigation navigation-2 navigation-3">
           <div class="container">
               <div class="row no-gutters">
@@ -18,64 +18,35 @@
                           <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                               <ul class="navbar-nav ml-auto">
                                   <li class="nav-item">
-                                      <a class="active" href="index.php">Home</a>
+                                      <a  href="index.php" class=" <?php if(basename($_SERVER['PHP_SELF']) == "index.php" ){
+                                          echo "active";
+                                      }else{
+                                          echo "";
+                                      } ?>">Home</a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="about.php">About us</a>
-                                  </li>
-                                  <li class="nav-item">
-                                      <a href="courses.php">Courses</a>
+                                    <a  href="courses.php" class=" <?= (basename($_SERVER['PHP_SELF']) == "courses.php" )? "active" : ""; ?>">Courses</a>
                                       <ul class="sub-menu">
-                                          <li><a href="courses-singel.php">Programming Fundamentals</a></li>
+                                          <li><a href="courses-singel.php" >Programming Fundamentals</a></li>
                                           <li><a href="courses-singel.php">Graphic Design</a></li>
                                           <li><a href="courses-singel.php">Mobile App Development</a></li>
                                           <li><a href="courses-singel.php">Web App Development</a></li>
-                                          <li><a href="courses-singel.php">Unity Mobile Game Development</a></li>
+                                          <li><a href="courses-singel.php">Unity Game Development</a></li>
                                           <li><a href="courses-singel.php">Microsoft Office</a></li>
-                                          <li><a href="courses-singel.php">English Language Proficiency</a></li>
                                           <li><a href="courses-singel.php">Content Writing</a></li>
                                       </ul>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="events.php">Events</a>
-                                      <ul class="sub-menu">
-                                          <li><a href="events.php">Events</a></li>
-                                          <li><a href="events-singel.php">Event Singel</a></li>
-                                      </ul>
+                                  <a  href="teachers.php" class=" <?= (basename($_SERVER['PHP_SELF']) == "teachers.php" )? "active" : ""; ?>">Our teachers</a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="teachers.php">Our teachers</a>
-                                      <ul class="sub-menu">
-                                          <ul class="sub-menu">
-                                              <li>
-                                                  <a href="teachers.php">teachers</a>
-                                              </li>
-                                              <li>
-                                                  <a href="teachers.php">teachers</a>
-                                              </li>
-                                              <li>
-                                                  <a href="teachers.php">teachers</a>
-                                              </li>
-                                              <li>
-                                                  <a href="teachers.php">teachers</a>
-                                              </li>
-                                          </ul>
-                                          <!-- <li><a href="teachers-singel.php">teacher Singel</a></li> -->
-                                      </ul>
+                                      <a  href="blog.php" class=" <?= (basename($_SERVER['PHP_SELF']) == "blog.php" )? "active" : ""; ?>">Blog</a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="blog.php">Blog</a>
-                                      <ul class="sub-menu">
-                                          <li><a href="blog.php">Blog</a></li>
-                                          <li><a href="blog-singel.php">Blog Singel</a></li>
-                                      </ul>
+                                  <a  href="about.php" class=" <?= (basename($_SERVER['PHP_SELF']) == "about.php" )? "active" : ""; ?>">About Us</a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="contact.php">Contact</a>
-                                      <ul class="sub-menu">
-                                          <li><a href="contact.php">Contact Us</a></li>
-                                          <li><a href="contact-2.php">Contact Us 2</a></li>
-                                      </ul>
+                                      <a  href="contact.php" class=" <?= (basename($_SERVER['PHP_SELF']) == "contact.php" )? "active" : ""; ?>">Contact Us</a>
                                   </li>
                               </ul>
                           </div>
