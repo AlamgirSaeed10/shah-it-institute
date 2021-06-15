@@ -11,32 +11,27 @@
             <div class="row patnar-slied">
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/shahfoundation.jpg" alt="Logo">
+                        <img src="images/patnar-logo/shahfoundation.jpg" title="Shah Foundation"  alt="Shah Foundation Logo">
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/shahmani.jpg" alt="Logo">
+                        <img src="images/patnar-logo/shahgameworld.jpg" title="Shah Game World" alt="Shah Game world logo">
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/shahcandyworld.jpg" alt="Logo">
+                        <img src="images/patnar-logo/akcjhelum.jpg" title="AKC college Jhelum" alt="AKC college logo">
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/shahmani.jpg" alt="Logo">
+                        <img src="images/patnar-logo/shahpress.jpg" title="Shah Press & Media" alt="Shah Press & Media Logo">
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/shahfoundation.jpg" alt="Logo">
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="singel-patnar text-center mt-40">
-                        <img src="images/patnar-logo/shahpress.jpg" alt="Logo">
+                        <img src="images/patnar-logo/teqholic.jpg" title="Teqholic" alt="Teqholic Logo">
                     </div>
                 </div>
             </div> <!-- row -->
