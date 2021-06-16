@@ -190,30 +190,23 @@
                             <div class="singel-course-2">
                                 <div class="thum">
                                     <div class="image">
-                                        <img src="images/course/cu-1.jpg" alt="Course">
-                                    </div>
-                                    <div class="price">
-                                        <span><?php echo $row['course_price'];  ?></span>
+                                    <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" />' ?>
                                     </div>
                                     <div class="course-teacher">
                                         <div class="thum">
-                                            <a href="<?php echo $row['id'];  ?>"><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '" width=50px />' ?></a>
+                                            <a href="<?php echo $row['id'];  ?>"><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" width=50px height=50px />' ?></a>
                                         </div>
                                         <div class="name">
                                             <a href="#">
-                                                <h6> <?php echo $row['course_id'];  ?></h6>
+                                                <h6> <?php echo $row['course_name'];  ?></h6>
                                             </a>
                                         </div>
-                                        <div class="review">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i><?php echo $row['course_review'] ?></li>
-                                            </ul>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="cont">
                                     <a href="#">
-                                        <h4><?php echo $row['course_description'];  ?></h4>
+                                        <h5><?php echo $row['course_description'];  ?></h5>
                                     </a>
                                 </div>
                             </div>
@@ -360,7 +353,7 @@
                 <div class="col-lg-12">
                     <div class="singel-testimonial">
                         <div class="testimonial-thum">
-                            <img src="images/testimonial/t-1.jpg" alt="Testimonial">
+                            <img src="images/testimonial/man.png" alt="Testimonial">
                             <div class="quote">
                                 <i class="fa fa-quote-right"></i>
                             </div>
@@ -369,15 +362,14 @@
                             <p>If you have got a passion and purpose then Shah IT Institute is the right place 
                             for you. I’m an IT graduate and wanted to enhance my Web Development skills. 
                             I had a passion for web designs and my tutor just made my dream come true.</p>
-                            <h6>Rubina Helen</h6>
-                            <span>Bsc, Engineering</span>
+                            <h6>Saqib Kazmi</h6>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-testimonial">
                         <div class="testimonial-thum">
-                            <img src="images/testimonial/t-2.jpg" alt="Testimonial">
+                            <img src="images/testimonial/man.png" alt="Testimonial">
                             <div class="quote">
                                 <i class="fa fa-quote-right"></i>
                             </div>
@@ -386,15 +378,14 @@
                             <p>Instructors at Shah IT Institute really cares for your success. When I enrolled, I thought I
                              wouldn’t be able to learn App development because I found it too complex. However, their flexible
                              teaching methods just changed my mind completely. Now I love developing mobile apps.</p>
-                            <h6>Rubina Helen</h6>
-                            <span>Bsc, Engineering</span>
+                            <h6>Faheem Safdar</h6>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-testimonial">
                         <div class="testimonial-thum">
-                            <img src="images/testimonial/t-3.jpg" alt="Testimonial">
+                            <img src="images/testimonial/man.png" alt="Testimonial">
                             <div class="quote">
                                 <i class="fa fa-quote-right"></i>
                             </div>
@@ -404,15 +395,14 @@
                          because I couldn’t afford to pay for expensive courses. Shah IT institute then offered
                           to not only just teach but fully equip me with the web development skills and all that
                            for completely free of cost. </p>
-                           <h6>Rubina Helen</h6>
-                            <span>Bsc, Engineering</span>
+                           <h6>Danish Jameel</h6>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-testimonial">
                         <div class="testimonial-thum">
-                            <img src="images/testimonial/t-3.jpg" alt="Testimonial">
+                            <img src="images/testimonial/man.png" alt="Testimonial">
                             <div class="quote">
                                 <i class="fa fa-quote-right"></i>
                             </div>
@@ -422,20 +412,19 @@
                         that he is taking. His course has not been completed yet and he already have received multiple 
                         job offers based on his skills. Definitely a worthy investment.</p>
                            <h6>Rubina Helen</h6>
-                            <span>Bsc, Engineering</span>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
                 <div class="col-lg-12">
                     <div class="singel-testimonial">
                         <div class="testimonial-thum">
-                            <img src="images/testimonial/t-3.jpg" alt="Testimonial">
+                            <img src="images/testimonial/man.png" alt="Testimonial">
                             <div class="quote">
                                 <i class="fa fa-quote-right"></i>
                             </div>
                         </div>
                         <div class="testimonial-cont">
-                        <p>5)	Highly recommended institution for learning technical skills. The best thing
+                        <p>Highly recommended institution for learning technical skills. The best thing
                          is that they believe in community education and they provide equal opportunity to each of their students. </p>
                            <h6>Rubina Helen</h6>
                             <span>Bsc, Engineering</span>

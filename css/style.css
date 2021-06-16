@@ -1767,7 +1767,7 @@ p {
 .singel-testimonial .testimonial-thum {
   position: absolute;
   display: inline-block;
-  left: 0;
+  left: -25px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
