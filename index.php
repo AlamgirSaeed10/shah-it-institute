@@ -186,7 +186,6 @@
                 if ($result->num_rows > 0) {
                     while ($row = mysqli_fetch_assoc($result)) { ?>
                         <div class="col-lg-4">
-
                             <div class="singel-course-2">
                                 <div class="thum">
                                     <div class="image">
@@ -362,7 +361,7 @@
                             <p>If you have got a passion and purpose then Shah IT Institute is the right place 
                             for you. I’m an IT graduate and wanted to enhance my Web Development skills. 
                             I had a passion for web designs and my tutor just made my dream come true.</p>
-                            <h6>Saqib Kazmi</h6>
+                            <h6>Danish Jameel</h6>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
@@ -375,10 +374,10 @@
                             </div>
                         </div>
                         <div class="testimonial-cont">
-                            <p>Instructors at Shah IT Institute really cares for your success. When I enrolled, I thought I
+                            <p>Instructors at Shah IT Institute really care for your success. When I enrolled, I thought I
                              wouldn’t be able to learn App development because I found it too complex. However, their flexible
                              teaching methods just changed my mind completely. Now I love developing mobile apps.</p>
-                            <h6>Faheem Safdar</h6>
+                            <h6>Muhammad Qasim Baig</h6>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
@@ -408,10 +407,10 @@
                             </div>
                         </div>
                         <div class="testimonial-cont">
-                        <p>My son is learning digital marketing from Shah IT Institute and I can see the interest 
+                        <p>My son is learning Web development from Shah IT Institute and I can see the interest 
                         that he is taking. His course has not been completed yet and he already have received multiple 
                         job offers based on his skills. Definitely a worthy investment.</p>
-                           <h6>Rubina Helen</h6>
+                           <h6>Jameel Ahmed</h6>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
@@ -426,8 +425,7 @@
                         <div class="testimonial-cont">
                         <p>Highly recommended institution for learning technical skills. The best thing
                          is that they believe in community education and they provide equal opportunity to each of their students. </p>
-                           <h6>Rubina Helen</h6>
-                            <span>Bsc, Engineering</span>
+                           <h6>Hamza Misar</h6>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
