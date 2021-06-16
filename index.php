@@ -425,7 +425,7 @@
                         <div class="testimonial-cont">
                         <p>Highly recommended institution for learning technical skills. The best thing
                          is that they believe in community education and they provide equal opportunity to each of their students. </p>
-                           <h6>Hamza Misar</h6>
+                           <h6>Hafsa Abid</h6>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
