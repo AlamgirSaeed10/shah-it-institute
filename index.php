@@ -344,106 +344,110 @@
     <!--====== TEACHERS PART START ======-->
     <!--====== TEACHERS PART ENDS ======-->
 
-    <!--====== NEWS PART START ======-->
+      <!--====== TEASTIMONIAL PART START ======-->
 
-    <section id="news-part" class="pt-30 pb-110">
+      <section id="testimonial" class="bg_cover pt-40 pb-40" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="section-title pb-50">
-                        <h5>Latest News</h5>
-                        <h2>From the news</h2>
+                    <div class="section-title pb-40">
+                        <h5>Testimonial</h5>
+                        <h2>What people say</h2>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="singel-news mt-30">
-                        <div class="news-thum pb-25">
-                            <img src="images/news/n-1.jpg" alt="News">
+            <div class="row testimonial-slied mt-40">
+                <div class="col-lg-12">
+                    <div class="singel-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/t-1.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
                         </div>
-                        <div class="news-cont">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                <li><a href="#"> <span>By</span> Adam linn</a></li>
-                            </ul>
-                            <a href="blog-singel.php">
-                                <h3>Tips to grade high cgpa in university life</h3>
-                            </a>
-                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .</p>
+                        <div class="testimonial-cont">
+                            <p>If you have got a passion and purpose then Shah IT Institute is the right place 
+                            for you. I’m an IT graduate and wanted to enhance my Web Development skills. 
+                            I had a passion for web designs and my tutor just made my dream come true.</p>
+                            <h6>Rubina Helen</h6>
+                            <span>Bsc, Engineering</span>
                         </div>
-                    </div> <!-- singel news -->
+                    </div> <!-- singel testimonial -->
                 </div>
-                <div class="col-lg-6">
-                    <div class="singel-news news-list">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="news-thum mt-30">
-                                    <img src="images/news/ns-1.jpg" alt="News">
-                                </div>
+                <div class="col-lg-12">
+                    <div class="singel-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/t-2.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
                             </div>
-                            <div class="col-sm-8">
-                                <div class="news-cont mt-30">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                        <li><a href="#"> <span>By</span> Adam linn</a></li>
-                                    </ul>
-                                    <a href="blog-singel.php">
-                                        <h3>Intellectual communication</h3>
-                                    </a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons vel.</p>
-                                </div>
-                            </div>
-                        </div> <!-- row -->
-                    </div> <!-- singel news -->
-                    <div class="singel-news news-list">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="news-thum mt-30">
-                                    <img src="images/news/ns-2.jpg" alt="News">
-                                </div>
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="news-cont mt-30">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                        <li><a href="#"> <span>By</span> Adam linn</a></li>
-                                    </ul>
-                                    <a href="blog-singel.php">
-                                        <h3>Study makes you perfect</h3>
-                                    </a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons vel.</p>
-                                </div>
-                            </div>
-                        </div> <!-- row -->
-                    </div> <!-- singel news -->
-                    <div class="singel-news news-list">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="news-thum mt-30">
-                                    <img src="images/news/ns-3.jpg" alt="News">
-                                </div>
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="news-cont mt-30">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                        <li><a href="#"> <span>By</span> Adam linn</a></li>
-                                    </ul>
-                                    <a href="blog-singel.php">
-                                        <h3>Technology edcution is now....</h3>
-                                    </a>
-                                    <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons vel.</p>
-                                </div>
-                            </div>
-                        </div> <!-- row -->
-                    </div> <!-- singel news -->
+                        </div>
+                        <div class="testimonial-cont">
+                            <p>Instructors at Shah IT Institute really cares for your success. When I enrolled, I thought I
+                             wouldn’t be able to learn App development because I found it too complex. However, their flexible
+                             teaching methods just changed my mind completely. Now I love developing mobile apps.</p>
+                            <h6>Rubina Helen</h6>
+                            <span>Bsc, Engineering</span>
+                        </div>
+                    </div> <!-- singel testimonial -->
                 </div>
-            </div> <!-- row -->
+                <div class="col-lg-12">
+                    <div class="singel-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/t-3.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                        <p>Before I came to know about Shah IT Institute, I could only dream of learning web development
+                         because I couldn’t afford to pay for expensive courses. Shah IT institute then offered
+                          to not only just teach but fully equip me with the web development skills and all that
+                           for completely free of cost. </p>
+                           <h6>Rubina Helen</h6>
+                            <span>Bsc, Engineering</span>
+                        </div>
+                    </div> <!-- singel testimonial -->
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/t-3.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                        <p>My son is learning digital marketing from Shah IT Institute and I can see the interest 
+                        that he is taking. His course has not been completed yet and he already have received multiple 
+                        job offers based on his skills. Definitely a worthy investment.</p>
+                           <h6>Rubina Helen</h6>
+                            <span>Bsc, Engineering</span>
+                        </div>
+                    </div> <!-- singel testimonial -->
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/t-3.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                        <p>5)	Highly recommended institution for learning technical skills. The best thing
+                         is that they believe in community education and they provide equal opportunity to each of their students. </p>
+                           <h6>Rubina Helen</h6>
+                            <span>Bsc, Engineering</span>
+                        </div>
+                    </div> <!-- singel testimonial -->
+                </div>
+            </div> <!-- testimonial slied -->
         </div> <!-- container -->
     </section>
 
-    <!--====== NEWS PART ENDS ======-->
+    <!--====== TEASTIMONIAL PART ENDS ======-->
+
 
     <!--====== PATNAR LOGO PART START ======-->
     <?php include("partner-logos.php"); ?>
