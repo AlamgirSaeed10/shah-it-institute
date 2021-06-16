@@ -273,15 +273,15 @@
                                 <div class="singel-form">
                                     <input type="text" name="student-address" id="student-address" placeholder="Your Address" required>
                                 </div>
-                                <!-- <div class="singel-form">
-                                    <input type="checkbox" name="" id="" value="PHP"> Content Writing
-                                    <input type="checkbox" name="" id="" value="PHP"> Graphic Design
-                                    <input type="checkbox" name="" id="" value="PHP">Web development
-                                    <input type="checkbox" name="" id="" value="PHP"> Android development
-                                    <input type="checkbox" name="" id="" value="PHP">Unity Game development
-                                    <input type="checkbox" name="" id="" value="PHP">Programming Fundamentals
-                                    <input type="checkbox" name="" id="" value="PHP"> MS Office
-                                    <input type="checkbox" name="" id="" value="PHP">Social Media Marketing
+                                <!-- <div class="singel-form1radio">
+                                    <input type="radio" name="" id="" value="PHP"> Content Writing
+                                    <input type="radio" name="" id="" value="PHP"> Graphic Design
+                                    <input type="radio" name="" id="" value="PHP">Web development
+                                    <input type="radio" name="" id="" value="PHP"> Android development
+                                    <input type="radio" name="" id="" value="PHP">Unity Game development
+                                    <input type="radio" name="" id="" value="PHP">Programming Fundamentals
+                                    <input type="radio" name="" id="" value="PHP"> MS Office
+                                    <input type="radio" name="" id="" value="PHP">Social Media Marketing
                                 </div> -->
                                 <div class="singel-form">
                                     <button class="main-btn" name="signup-button">Get it Now</button>

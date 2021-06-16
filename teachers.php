@@ -57,7 +57,7 @@
                                     <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '" />' ?>
                                 </div>
                                 <div class="cont">
-                                    <a href="#">
+                                    <a href="teachers-singel.php?t_id=<?php echo $row['teacher_id']; ?>">
                                         <h6><?php echo $row['teacher_name']; ?></h6>
                                     </a>
                                     <span><?php echo $row['designation']; ?></span>

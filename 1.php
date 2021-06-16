@@ -1,89 +1,30 @@
-<head>
-    <?php include("database/connection.php"); ?>
-    <?php include("link-libraries.php"); ?>
-</head>
-<section id="slider-part" class="slider-active slick-initialized slick-slider">
-<span class="prev slick-arrow" style="display: block;"><i class="fa fa-angle-left"></i></span>
-         <!-- single slider -->
-           
-         <!-- single slider -->
-         <!-- single slider -->
-    <div class="slick-list draggable"><div class="slick-track" 
-    style="opacity: 1; width: 5709px;"><div 
-    class="single-slider bg_cover pt-150 slick-slide slick-current slick-active" 
-    style="background-image: url('images/slider/bg-01.jpg'); 
-    width: 1903px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
-    data-overlay="4" tabindex="0" data-slick-index="0" aria-hidden="false">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-9">
-                        <div class="slider-cont">
-                            <h1 data-animation="fadeInLeft" data-delay="1s" class="animated fadeInLeft" 
-                            style="animation-delay: 1s;">Choose the right theme for education</h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s" class="animated fadeInUp" 
-                            style="animation-delay: 1.3s;">Donec vitae sapien ut libearo venenatis faucibus.
-                             Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  
-                             Sed fringilla mauri amet nibh.</p>
-                            <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" 
-                                class="main-btn animated fadeInUp" href="#" tabindex="0" 
-                                style="animation-delay: 1.6s;">Read More</a></li>
+<!DOCTYPE html>
+  <html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Showing image from Index.php page</title>
+  <style>
+	body{background-color: #f2f2f2; color: #333;}
+	.main{box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;}
+	h3{background-color: #4294D1; color: #f7f7f7; padding: 15px; border-radius: 4px; box-shadow: 0 1px 6px rgba(57,73,76,0.35);}
+	.img-box{margin-top: 20px;}
+	img{width: 600px; min-height: 400px; margin-bottom: 10px; box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; border:6px solid #f7f7f7;}
+  </style>
+  </head>
 
-                                <li><a data-animation="fadeInUp" data-delay="1.9s" 
-                                class="main-btn animated fadeInUp" href="#" tabindex="0" 
-                                style="animation-delay: 1.9s;">Get Started</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div><div class="single-slider bg_cover pt-150 slick-slide" 
-        style="background-image: url('images/slider/bg-03.jpg'); width: 1903px; 
-        position: relative; left: -1903px; top: 0px; z-index: 998; opacity: 0; 
-        transition: opacity 500ms ease 0s;" data-overlay="4" tabindex="-1" data-slick-index="1" aria-hidden="true">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-9">
-                        <div class="slider-cont">
-                            <h1 data-animation="fadeInLeft" data-delay="1s" class="" 
-                            style="animation-delay: 1s;">Choose the right theme for education</h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s" class="" 
-                            style="animation-delay: 1.3s;">Donec vitae sapien ut libearo venenatis faucibus. 
-                            Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla 
-                            mauri amet nibh.</p>
-                            <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" 
-                                href="#" tabindex="-1" style="animation-delay: 1.6s;">Read More</a></li>
+  <body>
+	<!-------------------Main Content------------------------------>
+  <div class="container main">
+	<h3>Showing Image from Index.php Page</h3>
+	<div class="img-box">
+	<?php
 
-                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn" 
-                                href="#" tabindex="-1" style="animation-delay: 1.9s;">Get Started</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div><div class="single-slider bg_cover pt-150 slick-slide" style="background-image: url(images/slider/bg-02.jpg); width: 1903px; position: relative; left: -3806px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;" data-overlay="4" tabindex="-1" data-slick-index="2" aria-hidden="true">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-9">
-                        <div class="slider-cont">
-                            <h1 data-animation="fadeInLeft" data-delay="1s" class="" style="animation-delay: 1s;">Choose the right theme for education</h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s" class="" style="animation-delay: 1.3s;">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
-                            <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#" tabindex="-1" style="animation-delay: 1.6s;">Read More</a></li>
-                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn" href="#" tabindex="-1" style="animation-delay: 1.9s;">Get Started</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div></div></div><span class="next slick-arrow" style="display: block;"><i class="fa fa-angle-right"></i></span>
-        </section>
-  
-    <!--====== BACK TO TP PART ENDS ======-->
-    <?php include("jsScripts.php"); ?>
-    <!--====== BACK TO TP PART ENDS ======-->
-
-</body>
-
-</html>
+	$id = $_GET["id"];
+?>
+<h1><?php echo $id;?></h1>
+	</div>
+  </div>
+  </body>
+  </html>
