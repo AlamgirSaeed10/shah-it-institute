@@ -120,7 +120,6 @@
                         <div class="items-cont">
                             <a href="#">
                                 <h5>Mobile App Design</h5>
-                                <!-- <span>24 courses</span> -->
                             </a>
                         </div>
                     </div> <!-- singel items -->
@@ -133,7 +132,6 @@
                         <div class="items-cont">
                             <a href="#">
                                 <h5>Graphic Design</h5>
-                                <!-- <span>103 courses</span> -->
                             </a>
                         </div>
                     </div> <!-- singel items -->
@@ -146,7 +144,6 @@
                         <div class="items-cont">
                             <a href="#">
                                 <h5>Web App development</h5>
-                                <!-- <span>57 courses</span> -->
                             </a>
                         </div>
                     </div> <!-- singel items -->
@@ -158,7 +155,7 @@
                         </div>
                         <div class="items-cont">
                             <a href="#">
-                                <h5>Game development</h5>sss
+                                <h5>Game development</h5>
                             </a>
                         </div>
                     </div> <!-- singel items -->
