@@ -71,7 +71,7 @@
                 aria-labelledby="courses-grid-tab">
                     <div class="row">
                     <?php
-                $sql = "SELECT our_teachers.teacher_image,our_teachers.teacher_name, course_deatil.course_name,
+                $sql = "SELECT our_teachers.teacher_image,our_teachers.teacher_name, course_deatil.course_id, course_deatil.course_name,
                 course_deatil.course_image,course_deatil.course_description
                 FROM our_teachers
                 INNER JOIN course_deatil ON our_teachers.teacher_id=course_deatil.teacher_id";
@@ -83,7 +83,9 @@
                             <div class="singel-course mt-30">
                                 <div class="thum">
                                     <div class="image">
+                                    <a href="courses-singel.php?id=<?php echo $row['course_id'];?>">
                                     <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" />' ?>
+                                    </a>
                                     </div>
                                 </div>
                                 <div class="cont">
@@ -95,7 +97,7 @@
                                         <li><i class="fa fa-star"></i></li>
                                     </ul>
                                     <span>(20 Reviws)</span>
-                                    <a href="courses-singel.html">
+                                    <a href="courses-singel.php?id=<?php echo $row['course_id'];?>">
                                         <h5><?php echo $row['course_description'];?></h5>
                                     </a>
                                     <div class="course-teacher">
@@ -103,9 +105,7 @@
                                         <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '" />' ?>
                                         </div>
                                         <div class="name">
-                                            <a href="#">
                                                 <h6><?php echo $row['teacher_name'];?></h6>
-                                            </a>
                                         </div>
                                         <div class="admin">
                                             <ul>
@@ -151,7 +151,7 @@
                                                 <li><i class="fa fa-star"></i></li>
                                             </ul>
                                             <span>(20 Reviws)</span>
-                                            <a href="#">
+                                            <a href="<?php echo $row['course_id'];?>">
                                             <h5><?php echo $row['course_description'];?></h5>
                                             </a>
                                             <div class="course-teacher">
