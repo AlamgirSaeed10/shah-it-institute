@@ -66,105 +66,56 @@
         }
     }
     ?>
-
-    <section id="slider-part-3" class="bg_cover" style="background-image: url(images/slider/bg-04.jpg)">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="slider-cont-3 text-center">
-                        <h2>Search for prefered courses</h2>
-                        <span>More then 9+ courses for you</span>
-                        <div class="slider-search mt-45">
-                            <form method="POST" autocomplete="off">
-                                <div class="row no-gutters">
-                                    <div class="col-sm-9">
-                                        <select name="course-selection">
-                                            <?php
-                                            $sql = "SELECT * FROM `courses`";
-                                            $result = $conn->query($sql);
-
-                                            if ($result->num_rows > 0) {
-                                                while ($row = $result->fetch_assoc()) { ?>
-                                                    <option value="<?php echo $row["course_name"] ?>"><?php echo $row["course_name"] ?></option>
-                                            <?php
-                                                }
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <button name="submit-btn" class="main-btn">Search Now</button>
-                                    </div>
-                                </div> <!-- row -->
-                            </form>
+    <section id="slider-part" class="slider-active">
+        <div class="single-slider bg_cover pt-200px" style="background-image: url(images/slider/bg-01.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right theme for education</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt Sed fringilla mauri amet nibh.</p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="about.php">Read More</a></li>
+                            </ul>
                         </div>
-                    </div> <!-- slider cont3 -->
-                </div>
-            </div> <!-- row -->
-            <!-- slider feature -->
-        </div> <!-- container -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        <div class="single-slider bg_cover " style="background-image: url(images/slider/bg-02.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right theme for education</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt Sed fringilla mauri amet nibh.</p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="about.php">Read More</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+
+        <div class="single-slider bg_cover " style="background-image: url(images/slider/bg-03.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right theme for education</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt Sed fringilla mauri amet nibh.</p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="about.php">Read More</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
     </section>
 
     <!--====== SLIDER PART ENDS ======-->
-
-    <!--====== CATEGORY PART START ======-->
-
-    <section id="category-3" class="category-2-items pt-50 pb-80 gray-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="singel-items text-center mt-30">
-                        <div class="items-image">
-                            <img src="images/category/ctg-1.jpg" alt="Category">
-                        </div>
-                        <div class="items-cont">
-                            <a href="#">
-                                <h5>Mobile App Design</h5>
-                            </a>
-                        </div>
-                    </div> <!-- singel items -->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="singel-items text-center mt-30">
-                        <div class="items-image">
-                            <img src="images/category/ctg-1.jpg" alt="Category">
-                        </div>
-                        <div class="items-cont">
-                            <a href="#">
-                                <h5>Graphic Design</h5>
-                            </a>
-                        </div>
-                    </div> <!-- singel items -->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="singel-items text-center mt-30">
-                        <div class="items-image">
-                            <img src="images/category/ctg-1.jpg" alt="Category">
-                        </div>
-                        <div class="items-cont">
-                            <a href="#">
-                                <h5>Web App development</h5>
-                            </a>
-                        </div>
-                    </div> <!-- singel items -->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="singel-items text-center mt-30">
-                        <div class="items-image">
-                            <img src="images/category/ctg-1.jpg" alt="Category">
-                        </div>
-                        <div class="items-cont">
-                            <a href="#">
-                                <h5>Game development</h5>
-                            </a>
-                        </div>
-                    </div> <!-- singel items -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== CATEGORY PART ENDS ======-->
 
     <!--====== COURSE PART START ======-->
 
@@ -189,7 +140,7 @@
                             <div class="singel-course-2">
                                 <div class="thum">
                                     <div class="image">
-                                    <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" />' ?>
+                                        <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" />' ?>
                                     </div>
                                     <div class="course-teacher">
                                         <div class="thum">
@@ -336,9 +287,9 @@
     <!--====== TEACHERS PART START ======-->
     <!--====== TEACHERS PART ENDS ======-->
 
-      <!--====== TEASTIMONIAL PART START ======-->
+    <!--====== TEASTIMONIAL PART START ======-->
 
-      <section id="testimonial" class="bg_cover pt-40 pb-40" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
+    <section id="testimonial" class="bg_cover pt-40 pb-40" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -358,9 +309,9 @@
                             </div>
                         </div>
                         <div class="testimonial-cont">
-                            <p>If you have got a passion and purpose then Shah IT Institute is the right place 
-                            for you. I’m an IT graduate and wanted to enhance my Web Development skills. 
-                            I had a passion for web designs and my tutor just made my dream come true.</p>
+                            <p>If you have got a passion and purpose then Shah IT Institute is the right place
+                                for you. I’m an IT graduate and wanted to enhance my Web Development skills.
+                                I had a passion for web designs and my tutor just made my dream come true.</p>
                             <h6>Danish Jameel</h6>
                         </div>
                     </div> <!-- singel testimonial -->
@@ -375,8 +326,8 @@
                         </div>
                         <div class="testimonial-cont">
                             <p>Instructors at Shah IT Institute really care for your success. When I enrolled, I thought I
-                             wouldn’t be able to learn App development because I found it too complex. However, their flexible
-                             teaching methods just changed my mind completely. Now I love developing mobile apps.</p>
+                                wouldn’t be able to learn App development because I found it too complex. However, their flexible
+                                teaching methods just changed my mind completely. Now I love developing mobile apps.</p>
                             <h6>Muhammad Qasim Baig</h6>
                         </div>
                     </div> <!-- singel testimonial -->
@@ -390,11 +341,11 @@
                             </div>
                         </div>
                         <div class="testimonial-cont">
-                        <p>Before I came to know about Shah IT Institute, I could only dream of learning web development
-                         because I couldn’t afford to pay for expensive courses. Shah IT institute then offered
-                          to not only just teach but fully equip me with the web development skills and all that
-                           for completely free of cost. </p>
-                           <h6>Danish Jameel</h6>
+                            <p>Before I came to know about Shah IT Institute, I could only dream of learning web development
+                                because I couldn’t afford to pay for expensive courses. Shah IT institute then offered
+                                to not only just teach but fully equip me with the web development skills and all that
+                                for completely free of cost. </p>
+                            <h6>Danish Jameel</h6>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
@@ -407,10 +358,10 @@
                             </div>
                         </div>
                         <div class="testimonial-cont">
-                        <p>My son is learning Web development from Shah IT Institute and I can see the interest 
-                        that he is taking. His course has not been completed yet and he already have received multiple 
-                        job offers based on his skills. Definitely a worthy investment.</p>
-                           <h6>Jameel Ahmed</h6>
+                            <p>My son is learning Web development from Shah IT Institute and I can see the interest
+                                that he is taking. His course has not been completed yet and he already have received multiple
+                                job offers based on his skills. Definitely a worthy investment.</p>
+                            <h6>Jameel Ahmed</h6>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
@@ -423,10 +374,10 @@
                             </div>
                         </div>
                         <div class="testimonial-cont">
-                        <p>Highly recommended institution for learning technical skills. The best thing
-                         is that they believe in community education and they provide equal 
-                         opportunity to each of their students. </p>
-                         <h6>Hafsa Abid</h6>
+                            <p>Highly recommended institution for learning technical skills. The best thing
+                                is that they believe in community education and they provide equal
+                                opportunity to each of their students. </p>
+                            <h6>Hafsa Abid</h6>
                         </div>
                     </div> <!-- singel testimonial -->
                 </div>
