@@ -67,30 +67,30 @@
     }
     ?>
     <section id="slider-part" class="slider-active">
-        <div class="single-slider bg_cover pt-200px" style="background-image: url(images/slider/bg-01.jpg)" data-overlay="4">
+        <div class="single-slider bg_cover1" style="background-image: url(images/slider/wd-01.jpg)" data-overlay="4">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
-                            <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right theme for education</h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt Sed fringilla mauri amet nibh.</p>
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Web Application Development</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">Learn to create responsive, visually appealing sites that feature user-friendly design and clear navigation with the guidance of our expert instructors</p>
                             <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="about.php">Read More</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="courses.php">Read More</a></li>
                             </ul>
                         </div>
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- single slider -->
-        <div class="single-slider bg_cover " style="background-image: url(images/slider/bg-02.jpg)" data-overlay="4">
+        <div class="single-slider bg_cover1 " style="background-image: url(images/slider/gd-01.png)" data-overlay="4">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
-                            <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right theme for education</h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt Sed fringilla mauri amet nibh.</p>
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Graphic Design</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">We will teach you from basics to expert level Graphics leading towards your career growth</p>
                             <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="about.php">Read More</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="courses.php">Read More</a></li>
                             </ul>
                         </div>
                     </div>
@@ -98,15 +98,90 @@
             </div> <!-- container -->
         </div> <!-- single slider -->
 
-        <div class="single-slider bg_cover " style="background-image: url(images/slider/bg-03.jpg)" data-overlay="4">
+        <div class="single-slider bg_cover1 " style="background-image: url(images/slider/dm-01.jpg)" data-overlay="4">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
-                            <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right theme for education</h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt Sed fringilla mauri amet nibh.</p>
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Digital Media Marketing</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">The world is bound to be digital and in high times, we will teach you tips and tricks to master the world of social media. </p>
                             <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="about.php">Read More</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="courses.php">Read More</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        <div class="single-slider bg_cover1 " style="background-image: url(images/slider/gd-01.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Game Application Development</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">Game development is an innovative and valuable skill to withhold. Learn to make a fully-functional Game with proper training in the relevant frameworks.</p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="courses.php">Read More</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        <div class="single-slider bg_cover1 " style="background-image: url(images/slider/ad-01.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Mobile Apps Development</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">Get your hands on our exclusive Mobile App development course and get your first skill-oriented job.</p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="courses.php">Read More</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        <div class="single-slider bg_cover1 " style="background-image: url(images/slider/cw-01.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Content Writing</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">Content writing combined with proper SEO and creative writing skills can help your business generate more leads, traffic and sales. Learn now and lead by example.</p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="courses.php">Read More</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        <div class="single-slider bg_cover1 " style="background-image: url(images/slider/ms-01.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Microsoft Office</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">The knowledge of MS Office is vital for almost every aspect of the job field. Learn invaluable office skills and make your CV stand out.</p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="courses.php">Read More</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        <div class="single-slider bg_cover1 " style="background-image: url(images/slider/pf-01.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Programming Fundamentals</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">Ge yourself a complete guide on the basics of all programming languages and start your journey as a Programmer.</p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="courses.php">Read More</a></li>
                             </ul>
                         </div>
                     </div>
@@ -122,8 +197,8 @@
     <section id="course-part" class="pt-30 pb-115">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-title pb-45">
+                <div class="col-lg-12">
+                    <div class="section-title pb-30">
                         <h5>Our course</h5>
                         <h2>Featured courses </h2>
                     </div> <!-- section title -->
@@ -131,23 +206,34 @@
             </div> <!-- row -->
             <div class="row course-slied mt-30">
                 <?php
-                $sql = "SELECT * FROM course_deatil ";
+                // SELECT course_deatil.course_name,course_deatil.course_description,course_deatil.course_image,course_deatil.course_id,our_teachers.course_id, our_teachers.teacher_image FROM course_deatil
+                // INNER JOIN our_teachers
+                // ON our_teachers.course_id = course_deatil.course_id WHERE our_teachers.course_id = course_deatil.course_id
+                $sql = "SELECT
+                *,
+                 our_teachers.course_id,
+                 our_teachers.teacher_image
+             FROM
+                 course_deatil
+             INNER JOIN our_teachers ON our_teachers.course_id = course_deatil.course_id
+             WHERE
+                 our_teachers.course_id = course_deatil.course_id";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
                     while ($row = mysqli_fetch_assoc($result)) { ?>
-                        <div class="col-lg-4">
+                        <div class="col-lg-12">
                             <div class="singel-course-2">
                                 <div class="thum">
                                     <div class="image">
-                                        <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" />' ?>
+                                        <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" width=400px height=300px />' ?>
                                     </div>
                                     <div class="course-teacher">
                                         <div class="thum">
-                                            <a href="<?php echo $row['id'];  ?>"><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" width=50px height=50px />' ?></a>
+                                            <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '" width=50px height=50px />' ?>
                                         </div>
                                         <div class="name">
-                                            <a href="#">
+                                        <a href="courses-singel.php?id=<?php echo $row['course_id']; ?>">
                                                 <h6> <?php echo $row['course_name'];  ?></h6>
                                             </a>
                                         </div>

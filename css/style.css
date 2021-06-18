@@ -125,12 +125,18 @@ p {
   margin: 0px;
 }
 
+.bg_cover1 {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 650px;
+}
 .bg_cover {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
 }
 
 /*===== All Button Style =====*/
@@ -972,6 +978,7 @@ p {
 .slider-cont {
   position: relative;
   z-index: 5;
+  margin-top: 35%;
 }
 .slider-cont h1 {
   font-size: 60px;
@@ -999,7 +1006,7 @@ p {
 .slider-active .slick-arrow {
   font-size: 50px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   color: #fff;
   cursor: pointer;
@@ -1363,12 +1370,15 @@ p {
   background-color: #fff;
   border-radius: 5px;
   overflow: hidden;
+  margin-right: 5px;
 }
 .singel-course > .thum {
   position: relative;
 }
 .singel-course .thum .image {
   overflow: hidden;
+
+  
 }
 .singel-course .thum .image img {
   width: 100%;
@@ -1461,7 +1471,9 @@ p {
 .singel-course .course-teacher .name a:hover h6 {
   color: #ffc600;
 }
-
+.admin{
+  float: right;
+}
 .singel-course .course-teacher .admin {
   display: inline-block;
   /* overflow: hidden; */

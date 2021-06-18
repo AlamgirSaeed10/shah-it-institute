@@ -28,8 +28,8 @@
                         <h2>Few tips for get better</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Blog</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Blog</li>
                                 </ol>
                         </nav>
                     </div>  <!-- page banner cont -->
@@ -66,9 +66,7 @@
                             echo "\t", $error->message;
                         }
                     } else {
-                    
-                            $category  =  $data->channel->category;
-
+                        $category  =  $data->channel->category;
                         foreach($data->channel->item as $item)
                         {
                             $link =  (string)$item->link;
@@ -76,20 +74,17 @@
                             $pubDate = (string)$item->pubDate;
                             $description = (string)$item->description;
                             ?>
-              <div class="col-lg-8">
+              <div class="col-lg-6">
                   <div class="blog-details mt-30">
-                      <div class="thum">
-                          <img src="images/blog/b-1.jpg" alt="Blog Details">
-                      </div>
-                      <div class="cont">
-                          <h3><?php echo $title;?></h3>
+                     <div class="cont">
+                          <h5><?php echo $title;?></h5>
                           <ul>
                                <li><a href="#"><i class="fa fa-calendar"></i><?php echo " ".$pubDate;?></a></li>
                                <li><a href="#"><i class="fa fa-tags"></i><?php echo $category?></a></li>
                            </ul>
                            <p><?php echo $description; ?></p>
                            <div class="singel-form">
-                            <button class="btn" ><a href="<?php echo $link;?>">Read more</a><i class="fa fa-angle-right"></i></button>
+                            <button class="btn" ><a href="<?php echo $link;?>">Read more</a></button>
                             </div>
                       </div> <!-- cont -->
                   </div> <!-- blog details -->

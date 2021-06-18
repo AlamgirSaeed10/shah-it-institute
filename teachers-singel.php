@@ -121,14 +121,6 @@
                                                     </ul>
                                                     <span>(20 Reviws)</span>
                                                     <a href="#"><h4><?php echo $row['course_description']?></h4></a>
-                                                    <div class="course-teacher">
-                                                        <div class="thum">
-                                                        <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '" />' ?>
-                                                        </div>
-                                                        <div class="name">
-                                                            <a href="#"><h6><?php echo $row['teacher_name']?></h6></a>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div> <!-- singel course -->
                                         </div>

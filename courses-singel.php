@@ -12,6 +12,8 @@
 $id = $_GET['id'];
 $t_id = "";
 $c_name = "";
+$c_img = "";
+
 ?>
 
     <!--====== PRELOADER PART START ======-->
@@ -23,6 +25,16 @@ $c_name = "";
     <!--====== HEADER PART ENDS ======-->
 
     <!--====== PAGE BANNER PART START ======-->
+    <?php
+      $sql = "SELECT * FROM `course_deatil` where course_id ='$id'";
+      $result = $conn->query($sql);
+      if (mysqli_num_rows($result) > 0) {
+          while ($row = mysqli_fetch_array($result)) {
+             $c_img = $row['course_image'];
+              $c_name = $row['course_description'];
+          }
+      }
+        ?>
 
     <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-2.jpg)">
         <div class="container">
@@ -34,7 +46,7 @@ $c_name = "";
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Courses</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Learn basic javasript</li>
+                                <li class="breadcrumb-item active" aria-current="page"><?php echo $c_name;?></li>
                             </ol>
                         </nav>
                     </div> <!-- page banner cont -->
@@ -56,7 +68,7 @@ $c_name = "";
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_array($result)) {
                                 $t_id = $row['teacher_id'];
-                                $c_name = $row['course_description'];
+                               // $c_name = $row['course_description'];
                           ?>
                 <div class="col-lg-8">
                     <div class="corses-singel-left mt-30">
@@ -69,14 +81,14 @@ $c_name = "";
                         $sql = "SELECT * FROM `our_teachers` where teacher_id ='$t_id'";
                         $result = $conn->query($sql);
                         if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_array($result)) {
-                                
+                            while ($row = mysqli_fetch_array($result)) { 
                           ?>
                             <ul>
                                 <li>
                                     <div class="teacher-name">
                                         <div class="thum">
-                                            <img src="images/course/teacher/t-1.jpg" alt="Teacher">
+                                        <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '"/>' ?>
+                                            <!-- <img src="images/course/teacher/t-1.jpg" alt="Teacher"> -->
                                         </div>
                                         <div class="name">
                                             <span>Teacher</span>
@@ -89,9 +101,7 @@ $c_name = "";
                         $sql = "SELECT * FROM `courses` where course_id ='$id'";
                         $result = $conn->query($sql);
                         if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_array($result)) {
-                                
-                          ?>
+                            while ($row = mysqli_fetch_array($result)) {?>
                                     <div class="course-category">
                                         <span>Category</span>
                                         <h6><?php echo $row['course_category']?> </h6>
@@ -115,8 +125,8 @@ $c_name = "";
                             <?php }}?>
                         </div> <!-- course terms -->
 
-                        <div class="corses-singel-image pt-50">
-                            <img src="images/course/cu-1.jpg" alt="Courses">
+                        <div class="corses-singel-image pt-20">
+                        <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($c_img) . '" width=760px height=456px />' ?>
                         </div> <!-- corses singel image -->
 
                         <div class="corses-tab mt-30">
@@ -216,6 +226,12 @@ $c_name = "";
                 </div>
                 <div class="col-lg-4">
                     <div class="row">
+                        <?php
+                        $sql = "SELECT * FROM `single_course` WHERE course_id='$id'";
+                        $result = $conn->query($sql);
+                        if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_array($result)) {  
+                        ?>
                         <div class="col-lg-12 col-md-6">
                             <div class="course-features mt-30">
                                 <h4>Course Features </h4>
@@ -227,11 +243,11 @@ $c_name = "";
                                 </ul>
                             </div> <!-- course features -->
                         </div>
-                    </div>
+                        <?php } }?>
+                    </div> <!-- row -->
                 </div>
-            
-            
-            <?php } }?></div> <!-- row -->
+                <?php } }?>
+            </div> <!-- row -->
             </div> <!-- container -->
     </section>
 

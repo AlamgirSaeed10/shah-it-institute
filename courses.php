@@ -84,7 +84,7 @@
                                 <div class="thum">
                                     <div class="image">
                                     <a href="courses-singel.php?id=<?php echo $row['course_id'];?>">
-                                    <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" />' ?>
+                                    <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" width=400 height = 300 />' ?>
                                     </a>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
                 <div class="tab-pane fade" id="courses-list" role="tabpanel" aria-labelledby="courses-list-tab">
                     <div class="row">
                     <?php
-                $sql = "SELECT our_teachers.teacher_image,our_teachers.teacher_name, course_deatil.course_name,
+                $sql = "SELECT our_teachers.teacher_image,our_teachers.teacher_name,our_teachers.teacher_id, course_deatil.course_name,
                 course_deatil.course_image,course_deatil.course_description
                 FROM our_teachers
                 INNER JOIN course_deatil ON our_teachers.teacher_id=course_deatil.teacher_id";
@@ -137,7 +137,7 @@
                                     <div class="col-md-6">
                                         <div class="thum">
                                             <div class="image">
-                                            <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" />' ?>
+                                            <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" width=580px height= 390px/>' ?>
                                             </div>
                                         </div>
                                     </div>
@@ -159,7 +159,7 @@
                                                 <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '" />' ?>
                                                 </div>
                                                 <div class="name">
-                                                    <a href="#">
+                                                <a href="teachers-singel.php?t_id=<?php echo $row['teacher_id']; ?>">
                                                     <h6><?php echo $row['teacher_name'];?></h6>
                                                     </a>
                                                 </div>
@@ -172,10 +172,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <?php } } ?>
+                                    
                                 </div> <!--  row  -->
                             </div> <!-- singel course -->
                         </div>
+                        <?php } } ?>
                     </div> <!-- row -->
                 </div>
             </div> <!-- tab content -->
