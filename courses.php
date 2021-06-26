@@ -3,7 +3,10 @@
 
 <head>
     <?php include("database/connection.php"); ?>
-    <?php include("link-libraries.php"); ?>
+    <?php  include("link-libraries.php");
+    session_start();
+    
+    ?>
 </head>
 
 <body>
@@ -58,9 +61,9 @@
                             <li class="nav-item">
                                 <a class="active" id="courses-grid-tab" data-toggle="tab" href="#courses-grid" role="tab" aria-controls="courses-grid" aria-selected="true"><i class="fa fa-th-large"></i></a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a id="courses-list-tab" data-toggle="tab" href="#courses-list" role="tab" aria-controls="courses-list" aria-selected="false"><i class="fa fa-th-list"></i></a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">Showning <?php echo $total_courses;?> Results</li>
                         </ul> <!-- nav -->
                     </div> <!-- courses top search -->
@@ -78,13 +81,24 @@
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) { ?>
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        // $_SESSION["idd"] = $row['course_id'];
+
+                        ?>
                         <div class="col-lg-4 col-md-6">
                             <div class="singel-course mt-30">
                                 <div class="thum">
                                     <div class="image">
                                     <a href="courses-singel.php?id=<?php echo $row['course_id'];?>">
-                                    <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" width=400 height = 300 />' ?>
+                                    <?php
+                                    if($row['course_image'] == null)
+                                    {
+                                        echo '<img src="images/noimg.png" width=400 height=300  />'; 
+                                    }else{
+                                        echo '<img src="data:image/jpeg;base64,'. base64_encode($row['course_image']) .'"
+                                        alt='.$row['course_name'].'width=400 height=300  />';
+                                    }
+                                    ?>
                                     </a>
                                     </div>
                                 </div>
@@ -98,7 +112,7 @@
                                     </ul>
                                     <span>(20 Reviws)</span>
                                     <a href="courses-singel.php?id=<?php echo $row['course_id'];?>">
-                                        <h5><?php echo $row['course_description'];?></h5>
+                                        <h5><?php echo $row['course_name'];?></h5>
                                     </a>
                                     <div class="course-teacher">
                                         <div class="thum">
@@ -107,12 +121,6 @@
                                         <div class="name">
                                                 <h6><?php echo $row['teacher_name'];?></h6>
                                         </div>
-                                        <div class="admin">
-                                            <ul>
-                                                <li><a href="#"><i class="fa fa-user"></i><span>31</span></a></li>
-                                                <li><a href="#"><i class="fa fa-heart"></i><span>10</span></a></li>
-                                            </ul>
-                                        </div>
                                     </div>
                                 </div>
                             </div> <!-- singel course -->
@@ -120,65 +128,8 @@
                         <?php } } ?>
                     </div> <!-- row -->
                 </div>
-                <div class="tab-pane fade" id="courses-list" role="tabpanel" aria-labelledby="courses-list-tab">
-                    <div class="row">
-                    <?php
-                $sql = "SELECT our_teachers.teacher_image,our_teachers.teacher_name,our_teachers.teacher_id, course_deatil.course_name,
-                course_deatil.course_image,course_deatil.course_description
-                FROM our_teachers
-                INNER JOIN course_deatil ON our_teachers.teacher_id=course_deatil.teacher_id";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) { ?>
-                        <div class="col-lg-12">
-                            <div class="singel-course mt-30">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6">
-                                        <div class="thum">
-                                            <div class="image">
-                                            <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['course_image']) . '" width=580px height= 390px/>' ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="cont">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                            <span>(20 Reviws)</span>
-                                            <a href="<?php echo $row['course_id'];?>">
-                                            <h5><?php echo $row['course_description'];?></h5>
-                                            </a>
-                                            <div class="course-teacher">
-                                                <div class="thum">
-                                                <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '" />' ?>
-                                                </div>
-                                                <div class="name">
-                                                <a href="teachers-singel.php?t_id=<?php echo $row['teacher_id']; ?>">
-                                                    <h6><?php echo $row['teacher_name'];?></h6>
-                                                    </a>
-                                                </div>
-                                                <div class="admin">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-user"></i><span>31</span></a></li>
-                                                        <li><a href="#"><i class="fa fa-heart"></i><span>10</span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div> <!--  row  -->
-                            </div> <!-- singel course -->
-                        </div>
-                        <?php } } ?>
-                    </div> <!-- row -->
-                </div>
+                
+                <!-- </div> -->
             </div> <!-- tab content -->
         </div> <!-- container -->
     </section>

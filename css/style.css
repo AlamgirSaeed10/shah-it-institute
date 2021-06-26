@@ -732,7 +732,7 @@ p {
 
 .navigation .navbar .navbar-nav > li > a.active,
 .navigation .navbar .navbar-nav > li > a:hover {
-  color: #ffc600;
+  color: #E4AB39;
 }
 
 .navigation .navbar .navbar-nav li .sub-menu {
@@ -978,7 +978,8 @@ p {
 .slider-cont {
   position: relative;
   z-index: 5;
-  margin-top: 35%;
+  margin-top: 25%;
+  margin-left: 50px;
 }
 .slider-cont h1 {
   font-size: 60px;
@@ -2492,7 +2493,7 @@ p {
   padding: 0;
 }
 .page-banner-cont .breadcrumb .breadcrumb-item {
-  color: #ffc600;
+  color: #E4AB39;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 2px;
