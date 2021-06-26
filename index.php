@@ -233,7 +233,7 @@
                                             <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($row['teacher_image']) . '" width=50px height=50px />' ?>
                                         </div>
                                         <div class="name">
-                                        <a href="courses-singel.php?id=<?php echo $row['course_id']; ?>">
+                                            <a href="courses-singel.php?id=<?php echo $row['course_id']; ?>">
                                                 <h6> <?php echo $row['course_name'];  ?></h6>
                                             </a>
                                         </div>
